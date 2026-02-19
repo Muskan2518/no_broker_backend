@@ -1,5 +1,4 @@
 const User = require("../models/User");
-const bcrypt = require("bcrypt");
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 
@@ -17,13 +16,16 @@ const otpStore = new Map();
 
 const signin = async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { email } = req.body;
+
+    console.info("Signin request received", { email });
 
     // Validate required fields
-    if (!email || !password) {
+    if (!email) {
+      console.warn("Signin validation failed", { email });
       return res.status(400).json({
         success: false,
-        error: "Please provide email and password",
+        error: "Please provide email",
       });
     }
 
@@ -31,27 +33,19 @@ const signin = async (req, res) => {
     const user = await User.findOne({ email });
 
     if (!user) {
+      console.warn("Signin user not found", { email });
       return res.status(401).json({
         success: false,
-        error: "Invalid email or password",
+        error: "Invalid email",
       });
     }
 
     // Check if user is blocked
     if (user.isBlocked) {
+      console.warn("Signin blocked user", { email, userId: user._id });
       return res.status(403).json({
         success: false,
         error: "Your account has been blocked. Please contact support.",
-      });
-    }
-
-    // Verify password
-    const isPasswordValid = await bcrypt.compare(password, user.passwordHashed);
-
-    if (!isPasswordValid) {
-      return res.status(401).json({
-        success: false,
-        error: "Invalid email or password",
       });
     }
 
@@ -84,20 +78,26 @@ const signin = async (req, res) => {
         `,
       });
 
+      console.info("Signin OTP sent", { email, userId: user._id });
+
       res.status(200).json({
         success: true,
         message: "Verification code sent to your email",
         userId: user._id,
       });
     } catch (emailError) {
-      console.error("Email error:", emailError);
+      console.error("Signin email error", {
+        email,
+        userId: user._id,
+        message: emailError.message,
+      });
       res.status(500).json({
         success: false,
         error: "Failed to send verification email. Please try again.",
       });
     }
   } catch (error) {
-    console.error("Signin error:", error);
+    console.error("Signin error", { email: req?.body?.email, message: error.message });
     res.status(500).json({
       success: false,
       error: error.message || "Internal server error",

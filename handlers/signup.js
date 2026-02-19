@@ -1,12 +1,19 @@
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 
-const signup = async (req, res) => {
+const createSignupHandler = ({ role, successMessage }) => async (req, res) => {
   try {
-    const { name, phoneNumber, email, password, role = "buyer" } = req.body;
+    const { name, phoneNumber, email, password } = req.body;
+
+    console.info("Signup request received", {
+      role,
+      email,
+      phoneNumber,
+    });
 
     // Validate required fields
     if (!name || !phoneNumber || !email || !password) {
+      console.warn("Signup validation failed", { role, email, phoneNumber });
       return res.status(400).json({
         success: false,
         error: "Please provide all required fields: name, phoneNumber, email, password",
@@ -19,6 +26,7 @@ const signup = async (req, res) => {
     });
 
     if (existingUser) {
+      console.warn("Signup conflict", { role, email, phoneNumber });
       return res.status(409).json({
         success: false,
         error: "User with this email or phone number already exists",
@@ -43,10 +51,17 @@ const signup = async (req, res) => {
     // Save user to database
     await newUser.save();
 
+    console.info("Signup success", {
+      role,
+      userId: newUser._id,
+      email: newUser.email,
+      phoneNumber: newUser.phoneNumber,
+    });
+
     // Return success response (don't send password)
     res.status(201).json({
       success: true,
-      message: "User registered successfully",
+      message: successMessage,
       user: {
         id: newUser._id,
         name: newUser.name,
@@ -58,7 +73,7 @@ const signup = async (req, res) => {
       },
     });
   } catch (error) {
-    console.error("Signup error:", error);
+    console.error("Signup error", { role, message: error.message });
     res.status(500).json({
       success: false,
       error: error.message || "Internal server error",
@@ -66,199 +81,24 @@ const signup = async (req, res) => {
   }
 };
 
-const sellerSignup = async (req, res) => {
-  try {
-    const { name, phoneNumber, email, password } = req.body;
+const signup = createSignupHandler({
+  role: "buyer",
+  successMessage: "User registered successfully",
+});
 
-    // Validate required fields
-    if (!name || !phoneNumber || !email || !password) {
-      return res.status(400).json({
-        success: false,
-        error: "Please provide all required fields: name, phoneNumber, email, password",
-      });
-    }
+const sellerSignup = createSignupHandler({
+  role: "seller",
+  successMessage: "Seller registered successfully",
+});
 
-    // Check if user already exists
-    const existingUser = await User.findOne({
-      $or: [{ email }, { phoneNumber }],
-    });
+const bothSignup = createSignupHandler({
+  role: "both",
+  successMessage: "User registered successfully as buyer and seller",
+});
 
-    if (existingUser) {
-      return res.status(409).json({
-        success: false,
-        error: "User with this email or phone number already exists",
-      });
-    }
+const adminSignup = createSignupHandler({
+  role: "admin",
+  successMessage: "Admin registered successfully",
+});
 
-    // Hash passwor
-    const saltRounds = 10;
-    const passwordHashed = await bcrypt.hash(password, saltRounds);
-
-    // Create new seller user
-    const newUser = new User({
-      name,
-      phoneNumber,
-      email,
-      passwordHashed,
-      role: "seller",
-      isVerified: false,
-      isBlocked: false,
-    });
-
-    // Save user to database
-    await newUser.save();
-
-    // Return success response (don't send password)
-    res.status(201).json({
-      success: true,
-      message: "Seller registered successfully",
-      user: {
-        id: newUser._id,
-        name: newUser.name,
-        email: newUser.email,
-        phoneNumber: newUser.phoneNumber,
-        role: newUser.role,
-        isVerified: newUser.isVerified,
-        createdAt: newUser.createdAt,
-      },
-    });
-  } catch (error) {
-    console.error("Seller signup error:", error);
-    res.status(500).json({
-      success: false,
-      error: error.message || "Internal server error",
-    });
-  }
-};
-
-const bothSignup = async (req, res) => {
-  try {
-    const { name, phoneNumber, email, password } = req.body;
-
-    // Validate required fields
-    if (!name || !phoneNumber || !email || !password) {
-      return res.status(400).json({
-        success: false,
-        error: "Please provide all required fields: name, phoneNumber, email, password",
-      });
-    }
-
-    // Check if user already exists
-    const existingUser = await User.findOne({
-      $or: [{ email }, { phoneNumber }],
-    });
-
-    if (existingUser) {
-      return res.status(409).json({
-        success: false,
-        error: "User with this email or phone number already exists",
-      });
-    }
-
-    // Hash password
-    const saltRounds = 10;
-    const passwordHashed = await bcrypt.hash(password, saltRounds);
-
-    // Create new user with both buyer and seller roles
-    const newUser = new User({
-      name,
-      phoneNumber,
-      email,
-      passwordHashed,
-      role: "both",
-      isVerified: false,
-      isBlocked: false,
-    });
-
-    // Save user to database
-    await newUser.save();
-
-    // Return success response (don't send password)
-    res.status(201).json({
-      success: true,
-      message: "User registered successfully as buyer and seller",
-      user: {
-        id: newUser._id,
-        name: newUser.name,
-        email: newUser.email,
-        phoneNumber: newUser.phoneNumber,
-        role: newUser.role,
-        isVerified: newUser.isVerified,
-        createdAt: newUser.createdAt,
-      },
-    });
-  } catch (error) {
-    console.error("Both signup error:", error);
-    res.status(500).json({
-      success: false,
-      error: error.message || "Internal server error",
-    });
-  }
-};
-
-const adminSignup = async (req, res) => {
-  try {
-    const { name, phoneNumber, email, password } = req.body;
-
-    // Validate required fields
-    if (!name || !phoneNumber || !email || !password) {
-      return res.status(400).json({
-        success: false,
-        error: "Please provide all required fields: name, phoneNumber, email, password",
-      });
-    }
-
-    // Check if user already exists
-    const existingUser = await User.findOne({
-      $or: [{ email }, { phoneNumber }],
-    });
-
-    if (existingUser) {
-      return res.status(409).json({
-        success: false,
-        error: "User with this email or phone number already exists",
-      });
-    }
-
-    // Hash password
-    const saltRounds = 10;
-    const passwordHashed = await bcrypt.hash(password, saltRounds);
-
-    // Create new admin user
-    const newUser = new User({
-      name,
-      phoneNumber,
-      email,
-      passwordHashed,
-      role: "admin",
-      isVerified: false,
-      isBlocked: false,
-    });
-
-    // Save user to database
-    await newUser.save();
-
-    // Return success response (don't send password)
-    res.status(201).json({
-      success: true,
-      message: "Admin registered successfully",
-      user: {
-        id: newUser._id,
-        name: newUser.name,
-        email: newUser.email,
-        phoneNumber: newUser.phoneNumber,
-        role: newUser.role,
-        isVerified: newUser.isVerified,
-        createdAt: newUser.createdAt,
-      },
-    });
-  } catch (error) {
-    console.error("Admin signup error:", error);
-    res.status(500).json({
-      success: false,
-      error: error.message || "Internal server error",
-    });
-  }
-};
-
-module.exports = { signup, sellerSignup, bothSignup, adminSignup };
+module.exports = { signup, sellerSignup, bothSignup, adminSignup, createSignupHandler };
