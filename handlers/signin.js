@@ -157,9 +157,22 @@ const verifyOtp = async (req, res) => {
       });
     }
 
+    // Sign JWT with private key (Bearer token)
+    const { signJwt } = require('../utils/jwtKeys');
+    const token = signJwt({
+      id: user._id,
+      name: user.name,
+      email: user.email,
+      phoneNumber: user.phoneNumber,
+      role: user.role,
+      isVerified: user.isVerified,
+      createdAt: user.createdAt,
+    });
+
     res.status(200).json({
       success: true,
       message: "Sign in successful",
+      token, // Bearer token
       user: {
         id: user._id,
         name: user.name,
