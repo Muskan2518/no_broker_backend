@@ -3,6 +3,8 @@ const cors = require("cors");
 require("dotenv").config();
 const mongoose = require("mongoose");
 const connectDB = require("./database/connect");
+const { connectRedis } = require("./database/reddis_setup");
+
 const sendMail = require("./utils/mailsender");
 const { signup, sellerSignup, bothSignup, adminSignup } = require("./handlers/signup");
 const { signin, verifyOtp } = require("./handlers/signin");
@@ -26,6 +28,7 @@ mongoose.connection.on("error", () => {
 connectDB().then((connected) => {
   dbConnected = connected;
 });
+connectRedis();
 
 app.use(express.json());
 
