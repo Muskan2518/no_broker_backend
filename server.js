@@ -8,6 +8,9 @@ const { connectRedis } = require("./database/reddis_setup");
 const sendMail = require("./utils/mailsender");
 const { signup, sellerSignup, bothSignup, adminSignup } = require("./handlers/signup");
 const { signin, verifyOtp } = require("./handlers/signin");
+
+const uploadHandler = require('./handlers/upload');
+const minioClient = require('./database/s3setup');
 const app = express();
 
 let dbConnected = false;
@@ -28,9 +31,21 @@ mongoose.connection.on("error", () => {
 connectDB().then((connected) => {
   dbConnected = connected;
 });
+
 connectRedis();
 
+// Test MinIO connection on server start
+minioClient.listBuckets((err, buckets) => {
+  if (err) {
+    console.error('❌ MinIO Connection Failed:', err.message || err);
+  } else {
+    console.log('✅ MinIO Connected. Buckets:', buckets.map(b => b.name).join(', ') || 'none');
+  }
+});
+
+
 app.use(express.json());
+app.use('/api', uploadHandler);
 
 app.use(
   cors({
