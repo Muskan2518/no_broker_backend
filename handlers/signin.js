@@ -1,5 +1,7 @@
 const User = require("../models/User");
 const nodemailer = require("nodemailer");
+const ipRateLimiter = require("../middleware/ipRateLimiter");
+
 require("dotenv").config();
 
 // Email transporter

@@ -1,5 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const ipRateLimiter = require("../middleware/ipRateLimiter");
+
 const {
   signup,
   sellerSignup,
@@ -14,7 +16,7 @@ router.post("/signup", signup);
 router.post("/seller_signup", sellerSignup);
 router.post("/both_signup", bothSignup);
 router.post("/admin_signup", adminSignup);
-router.post("/signin", signin);
+router.post("/signin",ipRateLimiter, signin);
 router.post("/verify-otp", verifyOtp);
 
 // Email route
