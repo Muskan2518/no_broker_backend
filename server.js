@@ -58,13 +58,6 @@ app.use(
 // Handle CORS preflight for all routes
 app.options(/.*/, cors());
 
-app.get("/", (req, res) => {
-  res.status(200).json({
-    status: "OK",
-    message: "No Broker API is running",
-    timestamp: new Date().toISOString(),
-  });
-});
 
 app.get(["/health", "/healthz"], (req, res) => {
   res.status(200).json({

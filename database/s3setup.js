@@ -1,17 +1,15 @@
-// Sample MinIO upload script
-const Minio = require('minio');
+// Sample AWS S3 upload script
+const AWS = require('aws-sdk');
 const path = require('path');
 
 
 
 
-// MinIO setup module
-const minioClient = new Minio.Client({
-  endPoint: process.env.MINIO_ENDPOINT || 'localhost',
-  port: process.env.MINIO_PORT ? parseInt(process.env.MINIO_PORT) : 9000,
-  useSSL: process.env.MINIO_USE_SSL === 'true',
-  accessKey: process.env.MINIO_ACCESS_KEY || 'admin',
-  secretKey: process.env.MINIO_SECRET_KEY || 'admin123',
+// AWS S3 setup module
+const s3 = new AWS.S3({
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  region: process.env.AWS_REGION || 'us-east-1',
 });
 
-module.exports = minioClient;
+module.exports = s3;
