@@ -30,7 +30,8 @@ router.post("/upload", upload.single("file"), async (req, res) => {
 
     res.json({ message: "File uploaded successfully", objectName });
   } catch (err) {
-    console.error("Upload error:", err);
+    const logger = require("../config/logger");
+    logger.error("Upload error:", err);
     res.status(500).json({ error: "Upload failed" });
   }
 });

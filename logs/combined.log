@@ -1,0 +1,24 @@
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-02-21T18:05:38.588Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-02-21T18:05:39.541Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-02-21T18:05:39.544Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-02-21T18:05:40.163Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-02-21T18:05:40.164Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-02-21T18:05:40.198Z"}
+{"level":"error","message":"❌ S3 Connection Failed:","service":"auth-service","timestamp":"2026-02-21T18:05:40.273Z"}
+{"level":"error","message":"🛑 Gracefully shutting down...","service":"auth-service","timestamp":"2026-02-21T18:06:33.541Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-02-21T18:06:41.548Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-00.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-02-21T18:06:42.554Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-02-21T18:06:42.558Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-02-21T18:06:43.421Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-02-21T18:06:43.422Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-02-21T18:06:43.456Z"}
+{"level":"error","message":"❌ S3 Connection Failed:","service":"auth-service","timestamp":"2026-02-21T18:06:43.523Z"}
+{"level":"error","message":"🛑 Gracefully shutting down...","service":"auth-service","timestamp":"2026-02-21T18:11:56.723Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-02-21T18:12:06.451Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-02-21T18:12:07.297Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-02-21T18:12:07.299Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-02-21T18:12:07.968Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-02-21T18:12:07.971Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-02-21T18:12:08.006Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-02-21T18:12:08.205Z"}
+{"level":"error","message":"🛑 Gracefully shutting down...","service":"auth-service","timestamp":"2026-02-21T18:12:11.984Z"}

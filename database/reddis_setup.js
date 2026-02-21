@@ -17,15 +17,16 @@ const connectRedis = async () => {
     },
   });
 
+  const logger = require("../config/logger");
   client.on("error", (err) =>
-    console.error("❌ Redis Client Error:", err)
+    logger.error("❌ Redis Client Error:", err)
   );
 
   try {
     await client.connect();
-    console.log("✅ Redis Connected Successfully");
+    logger.info("✅ Redis Connected Successfully");
   } catch (error) {
-    console.error("❌ Redis Connection Failed:", error);
+    logger.error("❌ Redis Connection Failed:", error);
   }
 
   return client;
@@ -41,7 +42,7 @@ const redisGet = async (key) => {
   try {
     return await client.get(key);
   } catch (err) {
-    console.error("Redis GET error:", err);
+    logger.error("Redis GET error:", err);
     return null;
   }
 };
@@ -61,7 +62,7 @@ const redisSet = async (key, value, expirySeconds = null) => {
     }
     return true;
   } catch (err) {
-    console.error("Redis SET error:", err);
+    logger.error("Redis SET error:", err);
     return false;
   }
 };
@@ -83,7 +84,7 @@ const redisIncrWithExpiry = async (key, expirySeconds) => {
 
     return count;
   } catch (err) {
-    console.error("Redis INCR error:", err);
+    logger.error("Redis INCR error:", err);
     return null;
   }
 };

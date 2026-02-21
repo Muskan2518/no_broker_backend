@@ -36,6 +36,7 @@ app.post("/send-email", async (req, res) => {
 });
 
 const PORT = 3000;
+const logger = require('../config/logger');
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  logger.info(`Server running on port ${PORT}`);
 });

@@ -1,5 +1,6 @@
 require("dotenv").config();
-const { redisIncrWithExpiry } = require("../config/redis");
+const logger = require("../config/logger");
+const { redisIncrWithExpiry } = require("../database/reddis_setup");
 
 const MAX_FREE_TRIES = parseInt(process.env.MAX_FREE_TRIES) || 5;
 const WINDOW_SECONDS =
@@ -27,7 +28,7 @@ const ipRateLimiter = async (req, res, next) => {
 
     next();
   } catch (error) {
-    console.error("Rate limiter error:", error);
+    logger.error("Rate limiter error:", error);
     next(); // fail open (don't block if Redis fails)
   }
 };

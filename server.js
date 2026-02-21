@@ -1,4 +1,5 @@
 const express = require("express");
+const logger = require("./config/logger");
 const cors = require("cors");
 require("dotenv").config();
 const mongoose = require("mongoose");
@@ -14,13 +15,13 @@ const app = express();
 
 // Crash if Mongo disconnects at runtime
 mongoose.connection.on("disconnected", () => {
-  console.error("❌ MongoDB disconnected. Shutting down...");
+  logger.error("❌ MongoDB disconnected. Shutting down...");
   process.exit(1);
 });
 
 // Crash on connection error
 mongoose.connection.on("error", (err) => {
-  console.error("❌ MongoDB error:", err);
+  logger.error("❌ MongoDB error:", err);
   process.exit(1);
 });
 
@@ -29,15 +30,15 @@ mongoose.connection.on("error", (err) => {
 async function startServer() {
   try {
     await connectDB();
-    console.log("✅ MongoDB Connected");
+    logger.info("✅ MongoDB Connected");
 
     await connectRedis();
-    console.log("✅ Redis Connected");
+    logger.info("✅ Redis Connected");
 
     s3.listBuckets((err, data) => {
-      if (err) console.error("❌ S3 Connection Failed:", err.message || err);
+      if (err) logger.error("❌ S3 Connection Failed:", err.message || err);
       else
-        console.log(
+        logger.info(
           "✅ S3 Connected. Buckets:",
           data.Buckets.map((b) => b.Name).join(", ") || "none",
         );
@@ -80,10 +81,10 @@ async function startServer() {
     const PORT = process.env.PORT || 3000;
 
     app.listen(PORT, () =>
-      console.log(`🚀 Server running on http://localhost:${PORT}`),
+      logger.info(`🚀 Server running on http://localhost:${PORT}`),
     );
   } catch (err) {
-    console.error("❌ Failed to start server:", err);
+    logger.error("❌ Failed to start server:", err);
     process.exit(1); // Crash if DB connection fails at startup
   }
 }
@@ -91,15 +92,15 @@ async function startServer() {
 startServer();
 
 /* ---------------- GRACEFUL SHUTDOWN ---------------- */
-
 process.on("SIGINT", async () => {
-  console.log("🛑 Gracefully shutting down...");
+  logger.error("🛑 Gracefully shutting down...");
   await mongoose.connection.close();
   process.exit(0);
 });
 
 process.on("SIGTERM", async () => {
-  console.log("🛑 SIGTERM received. Shutting down...");
+  logger.error("🛑 SIGTERM received. Shutting down...");
   await mongoose.connection.close();
   process.exit(0);
 });
+  
