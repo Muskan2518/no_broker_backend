@@ -4,48 +4,36 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const connectDB = require("./database/connect");
 const { connectRedis } = require("./database/reddis_setup");
+const uploadHandler = require("./handlers/upload");
+const s3 = require("./database/s3setup");
+const routes = require("./routes/index");
 
-const sendMail = require("./utils/mailsender");
-const { signup, sellerSignup, bothSignup, adminSignup } = require("./handlers/signup");
-const { signin, verifyOtp } = require("./handlers/signin");
-
-const uploadHandler = require('./handlers/upload');
-const minioClient = require('./database/s3setup');
 const app = express();
 
-let dbConnected = false;
-
+app.locals.dbConnected = false;
 mongoose.connection.on("connected", () => {
-  dbConnected = true;
+  app.locals.dbConnected = true;
 });
-
 mongoose.connection.on("disconnected", () => {
-  dbConnected = false;
+  app.locals.dbConnected = false;
 });
-
 mongoose.connection.on("error", () => {
-  dbConnected = false;
+  app.locals.dbConnected = false;
 });
 
-// Connect MongoDB (do not block server start if it fails)
 connectDB().then((connected) => {
-  dbConnected = connected;
+  app.locals.dbConnected = connected;
 });
-
 connectRedis();
 
-// Test MinIO connection on server start
-minioClient.listBuckets((err, buckets) => {
-  if (err) {
-    console.error('❌ MinIO Connection Failed:', err.message || err);
-  } else {
-    console.log('✅ MinIO Connected. Buckets:', buckets.map(b => b.name).join(', ') || 'none');
-  }
+s3.listBuckets((err, data) => {
+  if (err) console.error("❌ S3 Connection Failed:", err.message || err);
+  else
+    console.log(
+      "✅ S3 Connected. Buckets:",
+      data.Buckets.map((b) => b.Name).join(", ") || "none",
+    );
 });
-
-
-app.use(express.json());
-app.use('/api', uploadHandler);
 
 app.use(
   cors({
@@ -53,64 +41,34 @@ app.use(
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
-  })
+  }),
 );
-// Handle CORS preflight for all routes
 app.options(/.*/, cors());
+app.use(express.json());
 
+app.get("/", (req, res) =>
+  res
+    .status(200)
+    .json({
+      status: "OK",
+      message: "No Broker API is running",
+      timestamp: new Date().toISOString(),
+    }),
+);
+app.get(["/health", "/healthz"], (req, res) =>
+  res
+    .status(200)
+    .json({
+      status: "UP healthy",
+      db: app.locals.dbConnected ? "CONNECTED" : "DISCONNECTED",
+      timestamp: new Date().toISOString(),
+    }),
+);
 
-app.get(["/health", "/healthz"], (req, res) => {
-  res.status(200).json({
-    status: "UP healthy",
-    db: dbConnected ? "CONNECTED" : "DISCONNECTED",
-    timestamp: new Date().toISOString(),
-  });
-});
-
-const requireDbConnection = (req, res, next) => {
-  if (!dbConnected) {
-    return res.status(503).json({
-      success: false,
-      error: "Database not connected. Set MONGO_URI and ensure MongoDB is running.",
-    });
-  }
-  next();
-};
-
-// 👤 User Signup API
-app.post("/signup", requireDbConnection, signup);
-app.post("/seller_signup", requireDbConnection, sellerSignup);
-app.post("/both_signup", requireDbConnection, bothSignup);
-app.post("/admin_signup", requireDbConnection, adminSignup);
-
-// � User Signin API
-app.post("/signin", requireDbConnection, signin);
-app.post("/verify-otp", requireDbConnection, verifyOtp);
-
-// �📧 Send Email API
-app.post("/send-email", async (req, res) => {
-  const { to, subject, message } = req.body;
-
-  if (!to) {
-    return res.status(400).json({ error: "Receiver email is required" });
-  }
-
-  try {
-    await sendMail(to, subject, message);
-    res.status(200).json({
-      success: true,
-      message: "Email sent successfully",
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      error: error.message,
-    });
-  }
-});
+app.use("/api", uploadHandler);
+app.use("/", routes);
 
 const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+app.listen(PORT, () =>
+  console.log(`Server running on http://localhost:${PORT}`),
+);
