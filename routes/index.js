@@ -9,24 +9,13 @@ const {
 const { signin, verifyOtp } = require("../handlers/signin");
 const sendMail = require("../utils/mailsender");
 
-const requireDbConnection = (req, res, next) => {
-  if (!req.app.locals.dbConnected) {
-    return res.status(503).json({
-      success: false,
-      error:
-        "Database not connected. Set MONGO_URI and ensure MongoDB is running.",
-    });
-  }
-  next();
-};
-
 // Auth routes
-router.post("/signup", requireDbConnection, signup);
-router.post("/seller_signup", requireDbConnection, sellerSignup);
-router.post("/both_signup", requireDbConnection, bothSignup);
-router.post("/admin_signup", requireDbConnection, adminSignup);
-router.post("/signin", requireDbConnection, signin);
-router.post("/verify-otp", requireDbConnection, verifyOtp);
+router.post("/signup", signup);
+router.post("/seller_signup", sellerSignup);
+router.post("/both_signup", bothSignup);
+router.post("/admin_signup", adminSignup);
+router.post("/signin", signin);
+router.post("/verify-otp", verifyOtp);
 
 // Email route
 router.post("/send-email", async (req, res) => {
