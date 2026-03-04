@@ -8,8 +8,9 @@ const {
   bothSignup,
   adminSignup,
 } = require("../handlers/signup");
-const { signin, verifyOtp } = require("../handlers/signin");
+const { signin, verifyOtp, refreshToken, logout } = require("../handlers/signin");
 const sendMail = require("../utils/mailsender");
+const hsmRoutes = require("./hsm");
 
 // Auth routes
 router.post("/signup", signup);
@@ -18,6 +19,8 @@ router.post("/both_signup", bothSignup);
 router.post("/admin_signup", adminSignup);
 router.post("/signin",ipRateLimiter, signin);
 router.post("/verify-otp", verifyOtp);
+router.post("/refresh-token", refreshToken);
+router.post("/logout", logout);
 
 // Email route
 router.post("/send-email", async (req, res) => {
@@ -30,5 +33,8 @@ router.post("/send-email", async (req, res) => {
     res.status(500).json({ success: false, error: error.message });
   }
 });
+
+// HSM routes
+router.use("/hsm", hsmRoutes);
 
 module.exports = router;

@@ -8,6 +8,15 @@ const { connectRedis } = require("./database/reddis_setup");
 const uploadHandler = require("./handlers/upload");
 const s3 = require("./database/s3setup");
 const routes = require("./routes/index");
+const hsm = require("./config/hsm");
+const {
+  requestLogger,
+  securityHeaders,
+  errorHandler,
+  notFound,
+  rateLimiter,
+  ipRateLimiter,
+} = require("./middleware");
 
 const app = express();
 
@@ -44,8 +53,13 @@ async function startServer() {
         );
     });
 
+
+
     /* ---------------- MIDDLEWARE ---------------- */
 
+    app.use(requestLogger);
+    app.use(securityHeaders);
+    app.use(rateLimiter({ windowSeconds: 900, maxRequests: 100 }));
     app.use(
       cors({
         origin: process.env.FRONTEND_URL || "http://localhost:5173",
@@ -56,6 +70,7 @@ async function startServer() {
     );
 
     app.use(express.json());
+    app.use(express.urlencoded({ extended: true }));
 
     /* ---------------- ROUTES ---------------- */
 
@@ -67,16 +82,22 @@ async function startServer() {
       }),
     );
 
-    app.get(["/health", "/healthz"], (req, res) =>
-      res.status(200).json({
-        status: "UP healthy",
-        db: "CONNECTED",
-        timestamp: new Date().toISOString(),
-      }),
+    app.get(
+      ["/health", "/healthz"],
+      ipRateLimiter,
+      (req, res) =>
+        res.status(200).json({
+          status: "UP healthy",
+          db: "CONNECTED",
+          timestamp: new Date().toISOString(),
+        }),
     );
 
     app.use("/api", uploadHandler);
     app.use("/", routes);
+
+    app.use(notFound);
+    app.use(errorHandler);
 
     const PORT = process.env.PORT || 3000;
 

@@ -1,21 +1,16 @@
 const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
 
-// Generate a new RSA key pair on every server start
-const { publicKey, privateKey } = crypto.generateKeyPairSync('rsa', {
-  modulusLength: 2048,
-  publicKeyEncoding: {
-    type: 'spki',
-    format: 'pem',
-  },
-  privateKeyEncoding: {
-    type: 'pkcs8',
-    format: 'pem',
-  },
-});
+// Use RSA keys from environment variables
+const privateKey = process.env.PRIVATE_KEY.replace(/\\n/g, '\n');
+const publicKey = process.env.PUBLIC_KEY.replace(/\\n/g, '\n');
 
 function signJwt(payload, options = {}) {
-  return jwt.sign(payload, privateKey, { algorithm: 'RS256', ...options });
+  return jwt.sign(payload, privateKey, { algorithm: 'RS256', expiresIn: '15m', ...options });
+}
+
+function signRefreshToken(payload, options = {}) {
+  return jwt.sign(payload, privateKey, { algorithm: 'RS256', expiresIn: '7d', ...options });
 }
 
 function verifyJwt(token) {
@@ -54,4 +49,4 @@ function validateTokenWithKey(token, pubKey) {
   }
 }
 
-module.exports = { signJwt, verifyJwt, publicKey, generateKeypairAndSign, validateTokenWithKey };
+module.exports = { signJwt, signRefreshToken, verifyJwt, publicKey, generateKeypairAndSign, validateTokenWithKey };
