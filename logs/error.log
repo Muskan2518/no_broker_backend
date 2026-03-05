@@ -59,3 +59,5 @@
 {"code":"ECONNRESET","errno":-4077,"level":"error","message":"❌ Redis Client Error: read ECONNRESET","service":"auth-service","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)","syscall":"read","timestamp":"2026-03-05T11:52:40.309Z"}
 {"level":"error","message":"❌ MongoDB disconnected. Shutting down...","service":"auth-service","timestamp":"2026-03-05T11:52:50.591Z"}
 {"level":"error","message":"🛑 Gracefully shutting down...","service":"auth-service","timestamp":"2026-03-05T17:48:26.760Z"}
+{"level":"error","message":"🛑 Gracefully shutting down...","service":"auth-service","timestamp":"2026-03-05T17:49:55.096Z"}
+{"level":"error","message":"🛑 Gracefully shutting down...","service":"auth-service","timestamp":"2026-03-05T17:56:35.268Z"}
