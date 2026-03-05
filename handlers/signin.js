@@ -48,12 +48,24 @@ const signin = async (req, res) => {
       console.warn("Signin blocked user", { email, userId: user._id });
       return res.status(403).json({
         success: false,
-        error: "Your account has been blocked. Please contact support.",
+        isBlocked: true,
+        error: "Your account has been blocked.",
+        reason: user.blockReason || "Please contact support for more information.",
       });
     }
 
     // Generate 6-digit OTP
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
+
+    // Admin bypass: skip email sending for admin@broker.com
+    if (user.email === 'admin@broker.com') {
+      console.info("Admin signin - skipping OTP email", { email, userId: user._id });
+      return res.status(200).json({
+        success: true,
+        message: "Admin login - enter any OTP",
+        userId: user._id,
+      });
+    }
 
     // Store OTP in Redis with 5 minutes expiry
     await redisSet(`otp:${user._id}`, otp, 300);
@@ -117,36 +129,42 @@ const verifyOtp = async (req, res) => {
       });
     }
 
-    // Get stored OTP from Redis
-    const storedOtp = await redisGet(`otp:${userId}`);
-
-    if (!storedOtp) {
-      return res.status(401).json({
-        success: false,
-        error: "OTP expired or invalid. Please sign in again.",
-      });
-    }
-
-    // Verify OTP
-    if (storedOtp !== otp) {
-      return res.status(401).json({
-        success: false,
-        error: "Invalid OTP. Please try again.",
-      });
-    }
-
-    // OTP is valid, delete it from Redis
-    const { getRedisClient } = require("../database/reddis_setup");
-    await getRedisClient().del(`otp:${userId}`);
-
-    // Get user details
+    // Get user details to check if admin
     const user = await User.findById(userId).select("-passwordHashed");
-
     if (!user) {
       return res.status(404).json({
         success: false,
         error: "User not found",
       });
+    }
+
+    // Admin bypass: accept any OTP for admin@broker.com
+    if (user.email === 'admin@broker.com') {
+      // Skip OTP verification for admin
+    } else {
+      // Get stored OTP from Redis
+      const storedOtp = await redisGet(`otp:${userId}`);
+
+      if (!storedOtp) {
+        return res.status(401).json({
+          success: false,
+          error: "OTP expired or invalid. Please sign in again.",
+        });
+      }
+
+      // Verify OTP
+      if (storedOtp !== otp) {
+        return res.status(401).json({
+          success: false,
+          error: "Invalid OTP. Please try again.",
+        });
+      }
+    }
+
+    // OTP is valid, delete it from Redis (skip for admin)
+    if (user.email !== 'admin@broker.com') {
+      const { getRedisClient } = require("../database/reddis_setup");
+      await getRedisClient().del(`otp:${userId}`);
     }
 
     // Sign JWT with private key (Bearer token)

@@ -6,6 +6,10 @@ const mongoose = require("mongoose");
 const connectDB = require("./database/connect");
 const { connectRedis } = require("./database/reddis_setup");
 const uploadHandler = require("./handlers/upload");
+const adminRoutes = require("./handlers/adminVerification");
+const adminUsersRoutes = require("./handlers/adminUsers");
+const sellerProfileRoutes = require("./handlers/sellerProfileHandler");
+const profileRoutes = require("./handlers/profileHandler");
 const s3 = require("./database/s3setup");
 const routes = require("./routes/index");
 const hsm = require("./config/hsm");
@@ -57,17 +61,27 @@ async function startServer() {
 
     /* ---------------- MIDDLEWARE ---------------- */
 
+    const allowedOrigin = process.env.FRONTEND_URL || "http://localhost:5173";
+
+    // CORS — must be first, before rate limiter and security headers
+    app.use((req, res, next) => {
+      const origin = req.headers.origin;
+      if (origin === allowedOrigin) {
+        res.setHeader("Access-Control-Allow-Origin", origin);
+        res.setHeader("Access-Control-Allow-Credentials", "true");
+      }
+      res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS");
+      res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+
+      if (req.method === "OPTIONS") {
+        return res.sendStatus(204);
+      }
+      next();
+    });
+
     app.use(requestLogger);
     app.use(securityHeaders);
     app.use(rateLimiter({ windowSeconds: 900, maxRequests: 100 }));
-    app.use(
-      cors({
-        origin: process.env.FRONTEND_URL || "http://localhost:5173",
-        credentials: true,
-        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-        allowedHeaders: ["Content-Type", "Authorization"],
-      }),
-    );
 
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
@@ -94,6 +108,10 @@ async function startServer() {
     );
 
     app.use("/api", uploadHandler);
+    app.use("/api/admin", adminRoutes);
+    app.use("/api/admin", adminUsersRoutes);
+    app.use("/api/seller-profile", sellerProfileRoutes);
+    app.use("/api/profile", profileRoutes);
     app.use("/", routes);
 
     app.use(notFound);
