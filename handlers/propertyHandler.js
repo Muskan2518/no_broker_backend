@@ -34,12 +34,22 @@ router.post('/', authenticateJwt, checkBlocked, async (req, res) => {
     const {
       title, description, listingType, propertyType, price,
       bedrooms, bathrooms, areaSquareFeet, furnishing,
-      address, amenities, images,
+      address, location, amenities, images,
     } = req.body;
 
     if (!title || !listingType || !propertyType || !price || !address?.city) {
       return res.status(400).json({ error: 'title, listingType, propertyType, price, and city are required' });
     }
+
+    // Build location sub-doc only when at least one coord is provided
+    const locationData = {};
+    if (location?.latitude  != null && location.latitude  !== '') locationData.latitude  = Number(location.latitude);
+    if (location?.longitude != null && location.longitude !== '') locationData.longitude = Number(location.longitude);
+
+    // Build GeoJSON Point for geo-spatial queries (requires both coords)
+    const geoLocationData = (locationData.latitude != null && locationData.longitude != null)
+      ? { type: 'Point', coordinates: [locationData.longitude, locationData.latitude] }
+      : undefined;
 
     const property = await Property.create({
       title: title.trim(),
@@ -52,6 +62,8 @@ router.post('/', authenticateJwt, checkBlocked, async (req, res) => {
       areaSquareFeet: areaSquareFeet ? Number(areaSquareFeet) : undefined,
       furnishing: furnishing || 'unfurnished',
       address,
+      ...(Object.keys(locationData).length ? { location: locationData } : {}),
+      ...(geoLocationData ? { geoLocation: geoLocationData } : {}),
       amenities: amenities || [],
       images: images || [],
       owner: req.user.id,
@@ -91,28 +103,76 @@ router.get('/mine', authenticateJwt, checkBlocked, async (req, res) => {
   }
 });
 
-// GET /api/properties — browse all active listings with optional filters
+// GET /api/properties — browse all active listings with filters + pagination
 router.get('/', authenticateJwt, checkBlocked, async (req, res) => {
   try {
-    const { listingType, city, propertyType, minPrice, maxPrice } = req.query;
+    const {
+      listingType, city, propertyType,
+      minPrice, maxPrice,
+      furnishing,
+      minBedrooms, minBathrooms,
+      minArea, maxArea,
+      sortBy,
+      nearLat, nearLng, radius,
+      page, limit: limitQ,
+    } = req.query;
+
     const query = { status: 'active' };
 
     if (listingType && listingType !== 'all') query.listingType = listingType;
     if (propertyType && propertyType !== 'all') query.propertyType = propertyType;
     if (city && city.trim()) query['address.city'] = { $regex: city.trim(), $options: 'i' };
+    if (furnishing && furnishing !== 'all') query.furnishing = furnishing;
+
     if (minPrice || maxPrice) {
       query.price = {};
       if (minPrice) query.price.$gte = Number(minPrice);
       if (maxPrice) query.price.$lte = Number(maxPrice);
     }
+    if (minBedrooms && Number(minBedrooms) > 0) query.bedrooms = { $gte: Number(minBedrooms) };
+    if (minBathrooms && Number(minBathrooms) > 0) query.bathrooms = { $gte: Number(minBathrooms) };
+    if (minArea || maxArea) {
+      query.areaSquareFeet = {};
+      if (minArea) query.areaSquareFeet.$gte = Number(minArea);
+      if (maxArea) query.areaSquareFeet.$lte = Number(maxArea);
+    }
 
-    const properties = await Property.find(query)
-      .populate('owner', 'name email phoneNumber isVerified')
-      .sort({ createdAt: -1 })
-      .limit(60)
-      .lean();
+    // ── Geo-based filter: properties within radius km of user's location ──
+    // Uses $geoWithin + $centerSphere (works with pagination + countDocuments)
+    // Earth radius ≈ 6371 km; $centerSphere expects radians = km / 6371
+    if (nearLat && nearLng) {
+      const radiusKm = Math.min(200, Math.max(0.5, Number(radius) || 10));
+      query.geoLocation = {
+        $geoWithin: {
+          $centerSphere: [
+            [Number(nearLng), Number(nearLat)], // GeoJSON: [lng, lat]
+            radiusKm / 6371,
+          ],
+        },
+      };
+    }
 
-    res.json({ properties });
+    // Sort
+    let sort = { createdAt: -1 };
+    if (sortBy === 'price_asc')  sort = { price: 1 };
+    else if (sortBy === 'price_desc') sort = { price: -1 };
+
+    // Pagination
+    const pageNum  = Math.max(1, parseInt(page)   || 1);
+    const pageSize = Math.min(24, parseInt(limitQ) || 12);
+    const skip     = (pageNum - 1) * pageSize;
+
+    const [properties, total] = await Promise.all([
+      Property.find(query)
+        .populate('owner', 'name email phoneNumber isVerified')
+        .sort(sort)
+        .skip(skip)
+        .limit(pageSize)
+        .lean(),
+      Property.countDocuments(query),
+    ]);
+
+    res.json({ properties, total, page: pageNum, pages: Math.ceil(total / pageSize) });
   } catch (err) {
     res.status(500).json({ error: err.message || 'Failed to fetch properties' });
   }
@@ -152,7 +212,7 @@ router.patch('/:id', authenticateJwt, checkBlocked, async (req, res) => {
     if (!existing) return res.status(404).json({ error: 'Property not found or unauthorized' });
 
     const { title, description, listingType, propertyType, price,
-            bedrooms, bathrooms, areaSquareFeet, furnishing, address, amenities, images } = req.body;
+            bedrooms, bathrooms, areaSquareFeet, furnishing, address, location, amenities, images } = req.body;
 
     const updates = {};
     const auditEntries = [];
@@ -184,6 +244,28 @@ router.patch('/:id', authenticateJwt, checkBlocked, async (req, res) => {
         updates.address = address;
         auditEntries.push({ actionType: 'UPDATED', fieldName: 'address',
           oldValue: oldAddr, newValue: newAddr });
+      }
+    }
+
+    if (location !== undefined) {
+      const oldLat  = existing.location?.latitude  != null ? String(existing.location.latitude)  : '';
+      const oldLng  = existing.location?.longitude != null ? String(existing.location.longitude) : '';
+      const newLat  = location.latitude  != null && location.latitude  !== '' ? String(Number(location.latitude))  : '';
+      const newLng  = location.longitude != null && location.longitude !== '' ? String(Number(location.longitude)) : '';
+      if (oldLat !== newLat || oldLng !== newLng) {
+        const locData = {};
+        if (newLat !== '') locData.latitude  = Number(newLat);
+        if (newLng !== '') locData.longitude = Number(newLng);
+        updates.location = locData;
+        // Keep GeoJSON geoLocation in sync so geo queries stay accurate
+        if (locData.latitude != null && locData.longitude != null) {
+          updates.geoLocation = { type: 'Point', coordinates: [locData.longitude, locData.latitude] };
+        } else {
+          updates.geoLocation = undefined; // clear if coords removed
+        }
+        auditEntries.push({ actionType: 'UPDATED', fieldName: 'location',
+          oldValue: oldLat && oldLng ? `${oldLat},${oldLng}` : '',
+          newValue: newLat && newLng ? `${newLat},${newLng}` : '' });
       }
     }
 

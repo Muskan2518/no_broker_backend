@@ -38,6 +38,17 @@ const propertySchema = new mongoose.Schema(
       pincode: { type: String, trim: true },
     },
 
+    location: {
+      latitude:  { type: Number },
+      longitude: { type: Number },
+    },
+
+    // GeoJSON Point — kept in sync with location.lat/lng; enables $geoWithin / $near queries
+    geoLocation: {
+      type:        { type: String, enum: ['Point'] },
+      coordinates: { type: [Number] },  // [longitude, latitude]  ← GeoJSON order
+    },
+
     amenities: [{ type: String }],
     images:    [{ type: String }],
 
@@ -57,5 +68,8 @@ const propertySchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+// 2dsphere index enables MongoDB $geoWithin / $near geo queries on geoLocation
+propertySchema.index({ geoLocation: '2dsphere' });
 
 module.exports = mongoose.model('Property', propertySchema);
