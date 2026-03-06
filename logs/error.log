@@ -97,3 +97,5 @@
 {"code":"ECONNRESET","errno":-4077,"level":"error","message":"❌ Redis Client Error: read ECONNRESET","service":"auth-service","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)","syscall":"read","timestamp":"2026-03-06T16:28:01.649Z"}
 {"level":"error","message":"🛑 Gracefully shutting down...","service":"auth-service","timestamp":"2026-03-06T16:44:18.381Z"}
 {"level":"error","message":"🛑 Gracefully shutting down...","service":"auth-service","timestamp":"2026-03-06T16:45:12.704Z"}
+{"level":"error","message":"🛑 Gracefully shutting down...","service":"auth-service","timestamp":"2026-03-06T19:01:06.517Z"}
+{"level":"error","message":"🛑 Gracefully shutting down...","service":"auth-service","timestamp":"2026-03-06T19:03:41.051Z"}

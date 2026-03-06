@@ -10,7 +10,8 @@ const adminRoutes = require("./handlers/adminVerification");
 const adminDashboardRoutes = require("./handlers/adminDashboard");
 const sellerProfileRoutes = require("./handlers/sellerProfileHandler");
 const profileRoutes = require("./handlers/profileHandler");
-const propertyRoutes = require("./handlers/propertyHandler");
+const propertyRoutes     = require("./handlers/propertyHandler");
+const propertyLeadRoutes = require("./handlers/propertyLeadHandler");
 const s3 = require("./database/s3setup");
 const routes = require("./routes/index");
 const hsm = require("./config/hsm");
@@ -113,7 +114,8 @@ async function startServer() {
     app.use("/api/admin/dashboard", adminDashboardRoutes);
     app.use("/api/seller-profile", sellerProfileRoutes);
     app.use("/api/profile", profileRoutes);
-    app.use("/api/properties", propertyRoutes);
+    app.use("/api/properties",    propertyRoutes);
+    app.use("/api/property-leads", propertyLeadRoutes);
     app.use("/", routes);
 
     app.use(notFound);

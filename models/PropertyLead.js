@@ -11,6 +11,7 @@ const propertyLeadSchema = new mongoose.Schema(
       default: "new",
       index: true,
     },
+    closedAt: { type: Date, default: null },
   },
   { timestamps: true }
 );
