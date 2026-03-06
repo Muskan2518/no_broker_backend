@@ -746,3 +746,851 @@
 {"level":"info","message":"POST /signin 403 - 537ms","service":"auth-service","timestamp":"2026-03-05T17:50:46.043Z"}
 {"level":"info","message":"GET /verifications 304 - 296ms","service":"auth-service","timestamp":"2026-03-05T17:50:58.703Z"}
 {"level":"error","message":"🛑 Gracefully shutting down...","service":"auth-service","timestamp":"2026-03-05T17:56:35.268Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-05T17:57:04.441Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-00.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-05T17:57:05.192Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-05T17:57:05.193Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-05T17:57:05.773Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-05T17:57:05.774Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-05T17:57:05.784Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-05T17:57:07.071Z"}
+{"level":"info","message":"GET / 304 - 400ms","service":"auth-service","timestamp":"2026-03-05T17:58:50.222Z"}
+{"level":"info","message":"GET / 304 - 354ms","service":"auth-service","timestamp":"2026-03-05T17:58:50.578Z"}
+{"level":"info","message":"GET /verifications 304 - 312ms","service":"auth-service","timestamp":"2026-03-05T17:59:03.034Z"}
+{"level":"info","message":"GET /verifications 304 - 307ms","service":"auth-service","timestamp":"2026-03-05T17:59:03.343Z"}
+{"level":"info","message":"GET /verifications 200 - 377ms","service":"auth-service","timestamp":"2026-03-05T17:59:04.995Z"}
+{"level":"info","message":"GET /verifications 304 - 301ms","service":"auth-service","timestamp":"2026-03-05T17:59:06.570Z"}
+{"level":"info","message":"GET /verifications 200 - 362ms","service":"auth-service","timestamp":"2026-03-05T17:59:07.738Z"}
+{"level":"info","message":"GET /users 304 - 306ms","service":"auth-service","timestamp":"2026-03-05T17:59:09.858Z"}
+{"level":"info","message":"PATCH /block/69a945e77729ac7b8670ea6f 200 - 487ms","service":"auth-service","timestamp":"2026-03-05T17:59:11.712Z"}
+{"level":"info","message":"GET /users 200 - 307ms","service":"auth-service","timestamp":"2026-03-05T17:59:12.026Z"}
+{"level":"info","message":"POST /signin 200 - 3890ms","service":"auth-service","timestamp":"2026-03-05T17:59:26.569Z"}
+{"level":"info","message":"POST /verify-otp 200 - 1319ms","service":"auth-service","timestamp":"2026-03-05T17:59:50.096Z"}
+{"level":"info","message":"GET / 200 - 381ms","service":"auth-service","timestamp":"2026-03-05T17:59:50.531Z"}
+{"level":"info","message":"GET / 304 - 390ms","service":"auth-service","timestamp":"2026-03-05T17:59:50.924Z"}
+{"level":"info","message":"GET /status 200 - 363ms","service":"auth-service","timestamp":"2026-03-05T17:59:52.921Z"}
+{"level":"info","message":"GET /status 304 - 355ms","service":"auth-service","timestamp":"2026-03-05T17:59:53.279Z"}
+{"level":"info","message":"GET /status 304 - 441ms","service":"auth-service","timestamp":"2026-03-05T18:01:24.032Z"}
+{"level":"info","message":"GET /status 304 - 358ms","service":"auth-service","timestamp":"2026-03-05T18:01:24.397Z"}
+{"level":"info","message":"GET /verifications 401 - 266ms","service":"auth-service","timestamp":"2026-03-05T18:02:04.492Z"}
+{"level":"info","message":"GET /verifications 401 - 311ms","service":"auth-service","timestamp":"2026-03-05T18:02:04.902Z"}
+{"level":"info","message":"GET /users 401 - 246ms","service":"auth-service","timestamp":"2026-03-05T18:02:06.439Z"}
+{"level":"info","message":"GET / 401 - 262ms","service":"auth-service","timestamp":"2026-03-05T18:02:11.544Z"}
+{"level":"info","message":"GET / 401 - 251ms","service":"auth-service","timestamp":"2026-03-05T18:02:11.796Z"}
+{"level":"info","message":"GET /verifications 401 - 301ms","service":"auth-service","timestamp":"2026-03-05T18:02:19.545Z"}
+{"level":"info","message":"GET /verifications 401 - 246ms","service":"auth-service","timestamp":"2026-03-05T18:02:19.795Z"}
+{"level":"info","message":"GET /users 401 - 247ms","service":"auth-service","timestamp":"2026-03-05T18:02:20.950Z"}
+{"level":"info","message":"POST /logout 200 - 583ms","service":"auth-service","timestamp":"2026-03-05T18:02:26.914Z"}
+{"level":"info","message":"POST /signin 200 - 894ms","service":"auth-service","timestamp":"2026-03-05T18:02:42.027Z"}
+{"level":"info","message":"POST /verify-otp 200 - 584ms","service":"auth-service","timestamp":"2026-03-05T18:02:47.811Z"}
+{"level":"info","message":"GET / 304 - 395ms","service":"auth-service","timestamp":"2026-03-05T18:02:48.233Z"}
+{"level":"info","message":"GET / 304 - 401ms","service":"auth-service","timestamp":"2026-03-05T18:02:48.637Z"}
+{"level":"info","message":"GET /verifications 304 - 302ms","service":"auth-service","timestamp":"2026-03-05T18:02:52.482Z"}
+{"level":"info","message":"GET /verifications 304 - 327ms","service":"auth-service","timestamp":"2026-03-05T18:02:52.815Z"}
+{"level":"info","message":"GET /users 304 - 367ms","service":"auth-service","timestamp":"2026-03-05T18:02:54.316Z"}
+{"level":"info","message":"POST /logout 200 - 773ms","service":"auth-service","timestamp":"2026-03-05T18:08:18.689Z"}
+{"level":"info","message":"POST /signin 200 - 5500ms","service":"auth-service","timestamp":"2026-03-05T18:08:30.037Z"}
+{"level":"info","message":"POST /verify-otp 200 - 1580ms","service":"auth-service","timestamp":"2026-03-05T18:08:45.739Z"}
+{"level":"info","message":"GET / 200 - 427ms","service":"auth-service","timestamp":"2026-03-05T18:08:46.257Z"}
+{"level":"info","message":"GET / 304 - 554ms","service":"auth-service","timestamp":"2026-03-05T18:08:46.829Z"}
+{"level":"info","message":"PATCH / 400 - 413ms","service":"auth-service","timestamp":"2026-03-05T18:09:01.199Z"}
+{"level":"info","message":"GET / 304 - 562ms","service":"auth-service","timestamp":"2026-03-05T18:09:09.714Z"}
+{"level":"info","message":"GET / 304 - 435ms","service":"auth-service","timestamp":"2026-03-05T18:09:10.169Z"}
+{"level":"info","message":"GET /verifications 304 - 528ms","service":"auth-service","timestamp":"2026-03-05T18:09:24.425Z"}
+{"level":"info","message":"GET /verifications 304 - 460ms","service":"auth-service","timestamp":"2026-03-05T18:09:25.692Z"}
+{"level":"info","message":"PATCH /verify/69a945e77729ac7b8670ea6f 200 - 509ms","service":"auth-service","timestamp":"2026-03-05T18:09:27.619Z"}
+{"level":"info","message":"GET /verifications 200 - 519ms","service":"auth-service","timestamp":"2026-03-05T18:09:28.170Z"}
+{"level":"info","message":"GET /verifications 304 - 391ms","service":"auth-service","timestamp":"2026-03-05T18:09:29.993Z"}
+{"level":"info","message":"GET /verifications 200 - 483ms","service":"auth-service","timestamp":"2026-03-05T18:09:31.251Z"}
+{"level":"info","message":"PATCH /verify/69a945e77729ac7b8670ea6f 200 - 648ms","service":"auth-service","timestamp":"2026-03-05T18:09:35.532Z"}
+{"level":"info","message":"GET /verifications 200 - 535ms","service":"auth-service","timestamp":"2026-03-05T18:09:36.077Z"}
+{"level":"info","message":"GET /verifications 304 - 766ms","service":"auth-service","timestamp":"2026-03-05T18:09:38.624Z"}
+{"level":"info","message":"GET /verifications 200 - 548ms","service":"auth-service","timestamp":"2026-03-05T18:09:39.829Z"}
+{"level":"info","message":"POST /logout 200 - 742ms","service":"auth-service","timestamp":"2026-03-05T18:10:06.098Z"}
+{"level":"info","message":"POST /signin 200 - 6604ms","service":"auth-service","timestamp":"2026-03-05T18:10:18.192Z"}
+{"level":"info","message":"POST /verify-otp 200 - 1293ms","service":"auth-service","timestamp":"2026-03-05T18:10:39.778Z"}
+{"level":"info","message":"GET / 200 - 553ms","service":"auth-service","timestamp":"2026-03-05T18:10:40.401Z"}
+{"level":"info","message":"GET / 304 - 412ms","service":"auth-service","timestamp":"2026-03-05T18:10:40.815Z"}
+{"level":"info","message":"GET /status 200 - 458ms","service":"auth-service","timestamp":"2026-03-05T18:10:43.644Z"}
+{"level":"info","message":"GET /status 304 - 690ms","service":"auth-service","timestamp":"2026-03-05T18:10:44.343Z"}
+{"level":"info","message":"POST /logout 200 - 604ms","service":"auth-service","timestamp":"2026-03-05T18:11:01.384Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-05T18:13:09.282Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-00.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-05T18:13:10.199Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-05T18:13:10.201Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-05T18:13:11.031Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-05T18:13:11.066Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-05T18:13:11.095Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-05T18:13:11.816Z"}
+{"level":"info","message":"GET /verifications 200 - 868ms","service":"auth-service","timestamp":"2026-03-05T18:13:25.770Z"}
+{"level":"info","message":"POST /seller_signup 201 - 627ms","service":"auth-service","timestamp":"2026-03-05T18:14:06.271Z"}
+{"level":"info","message":"POST /signin 200 - 665ms","service":"auth-service","timestamp":"2026-03-05T18:14:09.254Z"}
+{"level":"info","message":"POST /verify-otp 200 - 779ms","service":"auth-service","timestamp":"2026-03-05T18:14:13.495Z"}
+{"level":"info","message":"GET / 200 - 470ms","service":"auth-service","timestamp":"2026-03-05T18:14:14.033Z"}
+{"level":"info","message":"GET / 304 - 392ms","service":"auth-service","timestamp":"2026-03-05T18:14:14.429Z"}
+{"level":"info","message":"GET /status 200 - 396ms","service":"auth-service","timestamp":"2026-03-05T18:14:17.201Z"}
+{"level":"info","message":"GET /status 304 - 513ms","service":"auth-service","timestamp":"2026-03-05T18:14:17.726Z"}
+{"level":"info","message":"POST /upload 200 - 1351ms","service":"auth-service","timestamp":"2026-03-05T18:14:39.547Z"}
+{"level":"info","message":"POST /submit-id 200 - 591ms","service":"auth-service","timestamp":"2026-03-05T18:14:40.149Z"}
+{"level":"info","message":"POST /logout 200 - 596ms","service":"auth-service","timestamp":"2026-03-05T18:14:43.744Z"}
+{"level":"info","message":"POST /signup 201 - 894ms","service":"auth-service","timestamp":"2026-03-05T18:15:05.103Z"}
+{"level":"info","message":"POST /signin 200 - 641ms","service":"auth-service","timestamp":"2026-03-05T18:15:07.213Z"}
+{"level":"info","message":"POST /verify-otp 200 - 941ms","service":"auth-service","timestamp":"2026-03-05T18:15:11.785Z"}
+{"level":"info","message":"GET / 200 - 757ms","service":"auth-service","timestamp":"2026-03-05T18:15:12.613Z"}
+{"level":"info","message":"GET / 304 - 450ms","service":"auth-service","timestamp":"2026-03-05T18:15:13.114Z"}
+{"level":"info","message":"GET / 304 - 409ms","service":"auth-service","timestamp":"2026-03-05T18:15:27.266Z"}
+{"level":"info","message":"GET / 304 - 431ms","service":"auth-service","timestamp":"2026-03-05T18:15:27.700Z"}
+{"level":"info","message":"GET /verifications 200 - 411ms","service":"auth-service","timestamp":"2026-03-05T18:15:29.607Z"}
+{"level":"info","message":"GET /verifications 304 - 378ms","service":"auth-service","timestamp":"2026-03-05T18:15:29.988Z"}
+{"level":"info","message":"GET /verifications 304 - 397ms","service":"auth-service","timestamp":"2026-03-05T18:15:31.378Z"}
+{"level":"info","message":"GET /users 200 - 421ms","service":"auth-service","timestamp":"2026-03-05T18:15:32.426Z"}
+{"level":"info","message":"POST /logout 200 - 532ms","service":"auth-service","timestamp":"2026-03-05T18:15:55.990Z"}
+{"level":"info","message":"POST /signin 200 - 729ms","service":"auth-service","timestamp":"2026-03-05T18:17:07.025Z"}
+{"level":"info","message":"POST /verify-otp 200 - 653ms","service":"auth-service","timestamp":"2026-03-05T18:17:15.665Z"}
+{"level":"info","message":"GET / 200 - 469ms","service":"auth-service","timestamp":"2026-03-05T18:17:16.204Z"}
+{"level":"info","message":"GET / 304 - 411ms","service":"auth-service","timestamp":"2026-03-05T18:17:16.618Z"}
+{"level":"info","message":"GET /status 200 - 504ms","service":"auth-service","timestamp":"2026-03-05T18:17:17.907Z"}
+{"level":"info","message":"GET /status 304 - 437ms","service":"auth-service","timestamp":"2026-03-05T18:17:18.346Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-05T18:28:40.486Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-01.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-05T18:28:41.344Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-05T18:28:41.353Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-05T18:28:42.119Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-05T18:28:42.162Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-05T18:28:42.268Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-05T18:28:43.399Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-05T18:28:52.193Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-01.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-05T18:28:52.919Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-05T18:28:52.932Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-05T18:28:53.488Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-05T18:28:53.489Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-05T18:28:53.503Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-05T18:28:54.144Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-05T18:29:03.764Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-01.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-05T18:29:04.515Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-05T18:29:04.516Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-05T18:29:05.419Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-05T18:29:05.489Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-05T18:29:05.557Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-05T18:29:06.209Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-05T18:30:38.787Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-05T18:30:39.745Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-05T18:30:39.746Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-05T18:30:40.561Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-05T18:30:40.562Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-05T18:30:40.601Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-05T18:30:42.518Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-05T18:30:43.267Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-05T18:30:43.269Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-05T18:30:43.812Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-05T18:30:43.814Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-05T18:30:43.850Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-05T18:30:44.460Z"}
+{"level":"info","message":"GET /users 401 - 609ms","service":"auth-service","timestamp":"2026-03-05T18:31:28.989Z"}
+{"level":"info","message":"GET /users 401 - 276ms","service":"auth-service","timestamp":"2026-03-05T18:32:18.645Z"}
+{"level":"info","message":"GET /users 401 - 270ms","service":"auth-service","timestamp":"2026-03-05T18:32:30.609Z"}
+{"level":"info","message":"GET / 401 - 287ms","service":"auth-service","timestamp":"2026-03-05T18:36:38.632Z"}
+{"level":"info","message":"GET / 401 - 258ms","service":"auth-service","timestamp":"2026-03-05T18:36:38.892Z"}
+{"level":"info","message":"GET /mine 401 - 291ms","service":"auth-service","timestamp":"2026-03-05T18:37:07.293Z"}
+{"level":"info","message":"GET /mine 401 - 239ms","service":"auth-service","timestamp":"2026-03-05T18:37:07.535Z"}
+{"level":"info","message":"GET /mine 401 - 322ms","service":"auth-service","timestamp":"2026-03-05T18:37:10.272Z"}
+{"level":"info","message":"GET /mine 401 - 361ms","service":"auth-service","timestamp":"2026-03-05T18:37:10.637Z"}
+{"level":"info","message":"GET /mine 401 - 318ms","service":"auth-service","timestamp":"2026-03-05T18:40:16.760Z"}
+{"level":"info","message":"GET /mine 401 - 301ms","service":"auth-service","timestamp":"2026-03-05T18:40:17.064Z"}
+{"level":"info","message":"GET / 401 - 314ms","service":"auth-service","timestamp":"2026-03-05T18:45:22.713Z"}
+{"level":"info","message":"GET / 401 - 291ms","service":"auth-service","timestamp":"2026-03-05T18:45:23.006Z"}
+{"level":"info","message":"GET /mine 401 - 364ms","service":"auth-service","timestamp":"2026-03-05T18:45:25.383Z"}
+{"level":"info","message":"GET /mine 401 - 342ms","service":"auth-service","timestamp":"2026-03-05T18:45:25.798Z"}
+{"level":"info","message":"GET / 401 - 811ms","service":"auth-service","timestamp":"2026-03-05T18:46:26.832Z"}
+{"level":"info","message":"GET / 401 - 329ms","service":"auth-service","timestamp":"2026-03-05T18:46:27.445Z"}
+{"level":"info","message":"GET /mine 401 - 333ms","service":"auth-service","timestamp":"2026-03-05T18:46:28.253Z"}
+{"level":"info","message":"GET /mine 401 - 300ms","service":"auth-service","timestamp":"2026-03-05T18:46:28.558Z"}
+{"level":"info","message":"GET / 401 - 576ms","service":"auth-service","timestamp":"2026-03-05T18:52:38.080Z"}
+{"level":"info","message":"GET / 401 - 246ms","service":"auth-service","timestamp":"2026-03-05T18:52:38.332Z"}
+{"level":"info","message":"GET /mine 401 - 244ms","service":"auth-service","timestamp":"2026-03-05T18:53:52.495Z"}
+{"level":"info","message":"GET /mine 401 - 265ms","service":"auth-service","timestamp":"2026-03-05T18:53:52.774Z"}
+{"level":"info","message":"GET /users 401 - 337ms","service":"auth-service","timestamp":"2026-03-05T18:55:09.890Z"}
+{"level":"info","message":"POST / 401 - 298ms","service":"auth-service","timestamp":"2026-03-05T18:58:54.112Z"}
+{"level":"info","message":"POST /logout 200 - 552ms","service":"auth-service","timestamp":"2026-03-05T18:59:09.891Z"}
+{"level":"info","message":"POST /signin 200 - 1087ms","service":"auth-service","timestamp":"2026-03-05T18:59:40.912Z"}
+{"level":"info","message":"POST /verify-otp 200 - 663ms","service":"auth-service","timestamp":"2026-03-05T18:59:46.912Z"}
+{"level":"info","message":"GET / 304 - 423ms","service":"auth-service","timestamp":"2026-03-05T18:59:47.405Z"}
+{"level":"info","message":"GET / 304 - 391ms","service":"auth-service","timestamp":"2026-03-05T18:59:47.887Z"}
+{"level":"info","message":"GET /mine 200 - 462ms","service":"auth-service","timestamp":"2026-03-05T18:59:50.697Z"}
+{"level":"info","message":"GET /mine 304 - 488ms","service":"auth-service","timestamp":"2026-03-05T18:59:51.198Z"}
+{"level":"info","message":"POST / 201 - 492ms","service":"auth-service","timestamp":"2026-03-05T19:00:30.668Z"}
+{"level":"info","message":"GET /mine 200 - 485ms","service":"auth-service","timestamp":"2026-03-05T19:00:31.234Z"}
+{"level":"info","message":"GET / 304 - 345ms","service":"auth-service","timestamp":"2026-03-05T19:00:38.286Z"}
+{"level":"info","message":"GET / 304 - 371ms","service":"auth-service","timestamp":"2026-03-05T19:00:38.661Z"}
+{"level":"info","message":"GET /mine 304 - 420ms","service":"auth-service","timestamp":"2026-03-05T19:00:42.165Z"}
+{"level":"info","message":"GET /mine 304 - 397ms","service":"auth-service","timestamp":"2026-03-05T19:00:42.570Z"}
+{"level":"info","message":"GET / 304 - 414ms","service":"auth-service","timestamp":"2026-03-05T19:00:55.575Z"}
+{"level":"info","message":"GET / 304 - 439ms","service":"auth-service","timestamp":"2026-03-05T19:00:56.018Z"}
+{"level":"info","message":"GET /mine 304 - 348ms","service":"auth-service","timestamp":"2026-03-05T19:00:58.588Z"}
+{"level":"info","message":"GET /mine 304 - 364ms","service":"auth-service","timestamp":"2026-03-05T19:00:59.091Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-05T19:02:24.770Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-01.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-05T19:02:25.777Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-05T19:02:25.780Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-05T19:02:26.410Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-05T19:02:26.413Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-05T19:02:26.444Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-05T19:02:27.496Z"}
+{"level":"info","message":"GET /users 401 - 293ms","service":"auth-service","timestamp":"2026-03-05T19:02:27.671Z"}
+{"level":"info","message":"GET / 304 - 425ms","service":"auth-service","timestamp":"2026-03-05T19:02:27.811Z"}
+{"level":"info","message":"GET / 304 - 476ms","service":"auth-service","timestamp":"2026-03-05T19:02:28.295Z"}
+{"level":"info","message":"GET /mine 304 - 433ms","service":"auth-service","timestamp":"2026-03-05T19:02:46.935Z"}
+{"level":"info","message":"GET /mine 304 - 475ms","service":"auth-service","timestamp":"2026-03-05T19:02:47.426Z"}
+{"level":"info","message":"GET /users 401 - 286ms","service":"auth-service","timestamp":"2026-03-05T19:03:13.664Z"}
+{"level":"info","message":"GET / 304 - 427ms","service":"auth-service","timestamp":"2026-03-05T19:03:13.795Z"}
+{"level":"info","message":"GET / 304 - 406ms","service":"auth-service","timestamp":"2026-03-05T19:03:14.204Z"}
+{"level":"info","message":"GET / 304 - 400ms","service":"auth-service","timestamp":"2026-03-05T19:03:20.637Z"}
+{"level":"info","message":"GET / 304 - 398ms","service":"auth-service","timestamp":"2026-03-05T19:03:21.039Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-05T19:03:26.908Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-05T19:03:27.835Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-05T19:03:27.837Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-05T19:03:28.610Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-05T19:03:28.612Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-05T19:03:28.661Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-05T19:03:30.058Z"}
+{"level":"info","message":"POST / 201 - 736ms","service":"auth-service","timestamp":"2026-03-05T19:05:35.169Z"}
+{"level":"info","message":"GET / 304 - 516ms","service":"auth-service","timestamp":"2026-03-05T19:05:47.843Z"}
+{"level":"info","message":"GET / 304 - 364ms","service":"auth-service","timestamp":"2026-03-05T19:05:48.219Z"}
+{"level":"info","message":"GET /status 304 - 432ms","service":"auth-service","timestamp":"2026-03-05T19:05:54.124Z"}
+{"level":"info","message":"GET /status 304 - 530ms","service":"auth-service","timestamp":"2026-03-05T19:05:54.763Z"}
+{"level":"info","message":"GET / 401 - 312ms","service":"auth-service","timestamp":"2026-03-05T19:06:51.250Z"}
+{"level":"info","message":"GET / 401 - 273ms","service":"auth-service","timestamp":"2026-03-05T19:06:51.529Z"}
+{"level":"info","message":"GET /verifications 401 - 359ms","service":"auth-service","timestamp":"2026-03-05T19:06:53.699Z"}
+{"level":"info","message":"GET /verifications 401 - 280ms","service":"auth-service","timestamp":"2026-03-05T19:06:53.984Z"}
+{"level":"info","message":"GET /verifications 401 - 349ms","service":"auth-service","timestamp":"2026-03-05T19:06:55.543Z"}
+{"level":"info","message":"GET /verifications 401 - 240ms","service":"auth-service","timestamp":"2026-03-05T19:06:57.572Z"}
+{"level":"info","message":"GET /verifications 401 - 548ms","service":"auth-service","timestamp":"2026-03-05T19:06:59.304Z"}
+{"level":"info","message":"POST /logout 200 - 913ms","service":"auth-service","timestamp":"2026-03-05T19:07:01.900Z"}
+{"level":"info","message":"POST /signin 200 - 794ms","service":"auth-service","timestamp":"2026-03-05T19:07:10.771Z"}
+{"level":"info","message":"POST /verify-otp 200 - 685ms","service":"auth-service","timestamp":"2026-03-05T19:07:15.438Z"}
+{"level":"info","message":"GET / 304 - 450ms","service":"auth-service","timestamp":"2026-03-05T19:07:15.977Z"}
+{"level":"info","message":"GET / 304 - 354ms","service":"auth-service","timestamp":"2026-03-05T19:07:16.336Z"}
+{"level":"info","message":"GET /verifications 304 - 528ms","service":"auth-service","timestamp":"2026-03-05T19:07:23.071Z"}
+{"level":"info","message":"GET /verifications 304 - 365ms","service":"auth-service","timestamp":"2026-03-05T19:07:23.440Z"}
+{"level":"info","message":"GET /users 304 - 381ms","service":"auth-service","timestamp":"2026-03-05T19:07:25.496Z"}
+{"level":"info","message":"GET /verifications 304 - 392ms","service":"auth-service","timestamp":"2026-03-05T19:07:27.525Z"}
+{"level":"info","message":"PATCH /verify/69a9c7ee97b5756b30458ea9 200 - 504ms","service":"auth-service","timestamp":"2026-03-05T19:07:29.618Z"}
+{"level":"info","message":"GET /verifications 200 - 407ms","service":"auth-service","timestamp":"2026-03-05T19:07:30.197Z"}
+{"level":"info","message":"GET /verifications 200 - 442ms","service":"auth-service","timestamp":"2026-03-05T19:07:32.517Z"}
+{"level":"info","message":"GET /verifications 304 - 372ms","service":"auth-service","timestamp":"2026-03-05T19:07:36.271Z"}
+{"level":"info","message":"GET /verifications 304 - 731ms","service":"auth-service","timestamp":"2026-03-05T19:07:40.919Z"}
+{"level":"info","message":"GET / 304 - 498ms","service":"auth-service","timestamp":"2026-03-05T19:07:42.871Z"}
+{"level":"info","message":"GET / 304 - 357ms","service":"auth-service","timestamp":"2026-03-05T19:07:43.230Z"}
+{"level":"info","message":"GET / 200 - 482ms","service":"auth-service","timestamp":"2026-03-05T19:07:46.644Z"}
+{"level":"info","message":"GET / 304 - 374ms","service":"auth-service","timestamp":"2026-03-05T19:07:47.021Z"}
+{"level":"info","message":"GET /status 200 - 470ms","service":"auth-service","timestamp":"2026-03-05T19:07:50.837Z"}
+{"level":"info","message":"GET /status 304 - 414ms","service":"auth-service","timestamp":"2026-03-05T19:07:51.253Z"}
+{"level":"info","message":"GET / 304 - 429ms","service":"auth-service","timestamp":"2026-03-05T19:07:54.453Z"}
+{"level":"info","message":"GET / 304 - 485ms","service":"auth-service","timestamp":"2026-03-05T19:07:54.940Z"}
+{"level":"info","message":"GET /status 304 - 434ms","service":"auth-service","timestamp":"2026-03-05T19:08:01.957Z"}
+{"level":"info","message":"GET /status 304 - 367ms","service":"auth-service","timestamp":"2026-03-05T19:08:02.330Z"}
+{"level":"info","message":"POST / 201 - 477ms","service":"auth-service","timestamp":"2026-03-05T19:08:34.475Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-05T19:09:51.023Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-00.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-05T19:09:52.228Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-05T19:09:52.229Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-05T19:09:53.040Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-05T19:09:53.045Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-05T19:09:53.075Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-05T19:09:54.115Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-05T19:10:08.298Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-00.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-05T19:10:09.065Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-05T19:10:09.068Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-05T19:10:09.734Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-05T19:10:09.749Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-05T19:10:09.792Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-05T19:10:10.376Z"}
+{"level":"info","message":"GET / 304 - 504ms","service":"auth-service","timestamp":"2026-03-05T19:10:52.051Z"}
+{"level":"info","message":"GET / 304 - 368ms","service":"auth-service","timestamp":"2026-03-05T19:10:52.423Z"}
+{"level":"info","message":"GET /status 304 - 511ms","service":"auth-service","timestamp":"2026-03-05T19:10:57.441Z"}
+{"level":"info","message":"GET /status 304 - 493ms","service":"auth-service","timestamp":"2026-03-05T19:10:57.939Z"}
+{"level":"info","message":"GET /status 304 - 385ms","service":"auth-service","timestamp":"2026-03-05T19:11:22.662Z"}
+{"level":"info","message":"GET /status 304 - 478ms","service":"auth-service","timestamp":"2026-03-05T19:11:23.142Z"}
+{"level":"info","message":"GET / 304 - 420ms","service":"auth-service","timestamp":"2026-03-05T19:11:30.299Z"}
+{"level":"info","message":"GET / 304 - 499ms","service":"auth-service","timestamp":"2026-03-05T19:11:30.802Z"}
+{"level":"info","message":"POST /logout 200 - 634ms","service":"auth-service","timestamp":"2026-03-05T19:11:47.864Z"}
+{"level":"info","message":"POST /signin 200 - 678ms","service":"auth-service","timestamp":"2026-03-05T19:11:55.721Z"}
+{"level":"info","message":"POST /verify-otp 200 - 701ms","service":"auth-service","timestamp":"2026-03-05T19:11:59.869Z"}
+{"level":"info","message":"GET / 304 - 451ms","service":"auth-service","timestamp":"2026-03-05T19:12:00.402Z"}
+{"level":"info","message":"GET / 304 - 462ms","service":"auth-service","timestamp":"2026-03-05T19:12:00.914Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-05T19:12:25.619Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-05T19:12:26.425Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-05T19:12:26.427Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-05T19:12:28.560Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-05T19:12:28.561Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-05T19:12:28.603Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-05T19:12:29.209Z"}
+{"level":"info","message":"GET / 304 - 661ms","service":"auth-service","timestamp":"2026-03-05T19:12:43.094Z"}
+{"level":"info","message":"GET / 304 - 493ms","service":"auth-service","timestamp":"2026-03-05T19:12:43.601Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-05T19:18:20.476Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-00.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-05T19:18:21.520Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-05T19:18:21.525Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-05T19:18:22.378Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-05T19:18:22.380Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-05T19:18:22.558Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-05T19:18:24.040Z"}
+{"level":"info","message":"GET /mine 200 - 576ms","service":"auth-service","timestamp":"2026-03-05T19:19:42.036Z"}
+{"level":"info","message":"GET / 304 - 426ms","service":"auth-service","timestamp":"2026-03-05T19:20:09.208Z"}
+{"level":"info","message":"GET / 304 - 347ms","service":"auth-service","timestamp":"2026-03-05T19:20:09.560Z"}
+{"level":"info","message":"GET /mine 200 - 412ms","service":"auth-service","timestamp":"2026-03-05T19:20:15.579Z"}
+{"level":"info","message":"GET /mine 200 - 492ms","service":"auth-service","timestamp":"2026-03-05T19:20:16.170Z"}
+{"level":"info","message":"PATCH /69a9d4b279f05abf55b0fb5f/status 200 - 497ms","service":"auth-service","timestamp":"2026-03-05T19:20:21.968Z"}
+{"level":"info","message":"GET /mine 200 - 528ms","service":"auth-service","timestamp":"2026-03-05T19:20:22.509Z"}
+{"level":"info","message":"GET /status 304 - 434ms","service":"auth-service","timestamp":"2026-03-05T19:21:35.499Z"}
+{"level":"info","message":"GET /status 304 - 480ms","service":"auth-service","timestamp":"2026-03-05T19:21:35.987Z"}
+{"level":"info","message":"GET /mine 200 - 431ms","service":"auth-service","timestamp":"2026-03-05T19:22:19.777Z"}
+{"level":"info","message":"GET /mine 200 - 482ms","service":"auth-service","timestamp":"2026-03-05T19:22:20.262Z"}
+{"level":"info","message":"POST /logout 200 - 516ms","service":"auth-service","timestamp":"2026-03-05T19:22:34.552Z"}
+{"level":"info","message":"POST /signin 200 - 1283ms","service":"auth-service","timestamp":"2026-03-05T19:22:42.672Z"}
+{"level":"info","message":"POST /verify-otp 200 - 686ms","service":"auth-service","timestamp":"2026-03-05T19:22:47.016Z"}
+{"level":"info","message":"GET / 200 - 446ms","service":"auth-service","timestamp":"2026-03-05T19:22:47.550Z"}
+{"level":"info","message":"GET / 304 - 410ms","service":"auth-service","timestamp":"2026-03-05T19:22:47.964Z"}
+{"level":"info","message":"GET / 304 - 434ms","service":"auth-service","timestamp":"2026-03-05T19:22:52.575Z"}
+{"level":"info","message":"GET / 304 - 399ms","service":"auth-service","timestamp":"2026-03-05T19:22:52.980Z"}
+{"level":"info","message":"GET / 200 - 602ms","service":"auth-service","timestamp":"2026-03-05T19:23:13.870Z"}
+{"level":"info","message":"GET / 200 - 891ms","service":"auth-service","timestamp":"2026-03-05T19:23:19.837Z"}
+{"level":"info","message":"GET /verifications 401 - 349ms","service":"auth-service","timestamp":"2026-03-05T19:23:33.943Z"}
+{"level":"info","message":"GET /verifications 401 - 251ms","service":"auth-service","timestamp":"2026-03-05T19:23:34.196Z"}
+{"level":"info","message":"GET /verifications 401 - 263ms","service":"auth-service","timestamp":"2026-03-05T19:23:35.873Z"}
+{"level":"info","message":"GET /verifications 401 - 330ms","service":"auth-service","timestamp":"2026-03-05T19:23:37.026Z"}
+{"level":"info","message":"GET /verifications 401 - 371ms","service":"auth-service","timestamp":"2026-03-05T19:23:38.670Z"}
+{"level":"info","message":"POST /logout 200 - 626ms","service":"auth-service","timestamp":"2026-03-05T19:23:40.584Z"}
+{"level":"info","message":"POST /signin 200 - 605ms","service":"auth-service","timestamp":"2026-03-05T19:23:48.804Z"}
+{"level":"info","message":"POST /verify-otp 200 - 634ms","service":"auth-service","timestamp":"2026-03-05T19:23:55.621Z"}
+{"level":"info","message":"GET / 304 - 355ms","service":"auth-service","timestamp":"2026-03-05T19:23:56.046Z"}
+{"level":"info","message":"GET / 304 - 375ms","service":"auth-service","timestamp":"2026-03-05T19:23:56.425Z"}
+{"level":"info","message":"GET /verifications 304 - 374ms","service":"auth-service","timestamp":"2026-03-05T19:23:58.909Z"}
+{"level":"info","message":"GET /verifications 304 - 355ms","service":"auth-service","timestamp":"2026-03-05T19:23:59.278Z"}
+{"level":"info","message":"GET /verifications 304 - 805ms","service":"auth-service","timestamp":"2026-03-05T19:24:00.757Z"}
+{"level":"info","message":"GET /verifications 304 - 390ms","service":"auth-service","timestamp":"2026-03-05T19:24:01.467Z"}
+{"level":"info","message":"GET /verifications 304 - 433ms","service":"auth-service","timestamp":"2026-03-05T19:24:03.520Z"}
+{"level":"info","message":"PATCH /verify/69a9c7ee97b5756b30458ea9 200 - 562ms","service":"auth-service","timestamp":"2026-03-05T19:24:06.933Z"}
+{"level":"info","message":"GET /verifications 200 - 311ms","service":"auth-service","timestamp":"2026-03-05T19:24:07.254Z"}
+{"level":"info","message":"GET /verifications 200 - 435ms","service":"auth-service","timestamp":"2026-03-05T19:24:09.685Z"}
+{"level":"info","message":"GET / 304 - 377ms","service":"auth-service","timestamp":"2026-03-05T19:24:16.465Z"}
+{"level":"info","message":"GET / 304 - 377ms","service":"auth-service","timestamp":"2026-03-05T19:24:16.845Z"}
+{"level":"info","message":"GET / 200 - 527ms","service":"auth-service","timestamp":"2026-03-05T19:24:25.401Z"}
+{"level":"info","message":"GET /verifications 304 - 451ms","service":"auth-service","timestamp":"2026-03-05T19:26:19.915Z"}
+{"level":"info","message":"GET / 304 - 461ms","service":"auth-service","timestamp":"2026-03-05T19:27:12.772Z"}
+{"level":"info","message":"GET / 304 - 382ms","service":"auth-service","timestamp":"2026-03-05T19:27:13.159Z"}
+{"level":"info","message":"GET / 304 - 491ms","service":"auth-service","timestamp":"2026-03-05T19:27:23.968Z"}
+{"level":"info","message":"GET / 200 - 412ms","service":"auth-service","timestamp":"2026-03-05T19:28:16.474Z"}
+{"level":"info","message":"GET / 304 - 468ms","service":"auth-service","timestamp":"2026-03-05T19:28:19.841Z"}
+{"level":"info","message":"GET / 304 - 380ms","service":"auth-service","timestamp":"2026-03-05T19:28:20.226Z"}
+{"level":"info","message":"GET /verifications 304 - 392ms","service":"auth-service","timestamp":"2026-03-05T19:29:26.794Z"}
+{"level":"info","message":"GET / 304 - 411ms","service":"auth-service","timestamp":"2026-03-05T19:29:26.865Z"}
+{"level":"info","message":"GET /verifications 304 - 368ms","service":"auth-service","timestamp":"2026-03-05T19:29:34.750Z"}
+{"level":"info","message":"POST /logout 200 - 505ms","service":"auth-service","timestamp":"2026-03-05T19:30:11.259Z"}
+{"level":"info","message":"POST /signin 200 - 744ms","service":"auth-service","timestamp":"2026-03-05T19:30:23.947Z"}
+{"level":"info","message":"POST /verify-otp 200 - 769ms","service":"auth-service","timestamp":"2026-03-05T19:30:28.645Z"}
+{"level":"info","message":"GET / 200 - 441ms","service":"auth-service","timestamp":"2026-03-05T19:30:29.181Z"}
+{"level":"info","message":"GET / 304 - 429ms","service":"auth-service","timestamp":"2026-03-05T19:30:29.615Z"}
+{"level":"info","message":"GET /mine 200 - 526ms","service":"auth-service","timestamp":"2026-03-05T19:30:31.995Z"}
+{"level":"info","message":"GET /mine 200 - 432ms","service":"auth-service","timestamp":"2026-03-05T19:30:32.429Z"}
+{"level":"info","message":"PATCH /69a9d4b279f05abf55b0fb5f/status 200 - 442ms","service":"auth-service","timestamp":"2026-03-05T19:30:36.966Z"}
+{"level":"info","message":"GET /mine 200 - 432ms","service":"auth-service","timestamp":"2026-03-05T19:30:37.412Z"}
+{"level":"info","message":"GET /mine 401 - 245ms","service":"auth-service","timestamp":"2026-03-05T19:31:31.622Z"}
+{"level":"info","message":"GET /verifications 304 - 487ms","service":"auth-service","timestamp":"2026-03-05T19:31:31.888Z"}
+{"level":"info","message":"GET /verifications 304 - 523ms","service":"auth-service","timestamp":"2026-03-05T19:31:39.875Z"}
+{"level":"info","message":"GET /verifications 304 - 445ms","service":"auth-service","timestamp":"2026-03-05T19:31:47.795Z"}
+{"level":"info","message":"GET /mine 200 - 505ms","service":"auth-service","timestamp":"2026-03-05T19:31:47.846Z"}
+{"level":"info","message":"GET / 304 - 504ms","service":"auth-service","timestamp":"2026-03-05T19:32:27.719Z"}
+{"level":"info","message":"GET /mine 200 - 573ms","service":"auth-service","timestamp":"2026-03-05T19:32:27.784Z"}
+{"level":"info","message":"GET / 304 - 425ms","service":"auth-service","timestamp":"2026-03-05T19:32:28.149Z"}
+{"level":"info","message":"GET /mine 200 - 420ms","service":"auth-service","timestamp":"2026-03-05T19:32:28.209Z"}
+{"level":"info","message":"GET /mine 200 - 499ms","service":"auth-service","timestamp":"2026-03-05T19:32:30.884Z"}
+{"level":"info","message":"GET /mine 200 - 441ms","service":"auth-service","timestamp":"2026-03-05T19:32:31.407Z"}
+{"level":"info","message":"GET /mine 200 - 428ms","service":"auth-service","timestamp":"2026-03-05T19:33:40.875Z"}
+{"level":"info","message":"GET / 304 - 406ms","service":"auth-service","timestamp":"2026-03-05T19:36:11.795Z"}
+{"level":"info","message":"GET /mine 200 - 477ms","service":"auth-service","timestamp":"2026-03-05T19:36:11.849Z"}
+{"level":"info","message":"GET /mine 200 - 416ms","service":"auth-service","timestamp":"2026-03-05T19:36:40.290Z"}
+{"level":"info","message":"GET /mine 200 - 488ms","service":"auth-service","timestamp":"2026-03-05T19:36:40.786Z"}
+{"level":"info","message":"GET /status 200 - 361ms","service":"auth-service","timestamp":"2026-03-05T19:36:52.988Z"}
+{"level":"info","message":"GET /status 304 - 402ms","service":"auth-service","timestamp":"2026-03-05T19:36:53.395Z"}
+{"level":"info","message":"GET /mine 200 - 406ms","service":"auth-service","timestamp":"2026-03-05T19:36:55.534Z"}
+{"level":"info","message":"GET /mine 200 - 447ms","service":"auth-service","timestamp":"2026-03-05T19:36:55.984Z"}
+{"level":"info","message":"DELETE /69a9d4b279f05abf55b0fb5f 200 - 591ms","service":"auth-service","timestamp":"2026-03-05T19:37:56.104Z"}
+{"level":"info","message":"GET /mine 200 - 406ms","service":"auth-service","timestamp":"2026-03-05T19:37:56.520Z"}
+{"level":"info","message":"GET /mine 200 - 405ms","service":"auth-service","timestamp":"2026-03-05T19:38:15.412Z"}
+{"level":"info","message":"GET /mine 200 - 401ms","service":"auth-service","timestamp":"2026-03-05T19:38:15.815Z"}
+{"level":"info","message":"GET /mine 200 - 399ms","service":"auth-service","timestamp":"2026-03-05T19:39:05.696Z"}
+{"level":"info","message":"GET /mine 200 - 399ms","service":"auth-service","timestamp":"2026-03-05T19:39:06.096Z"}
+{"level":"info","message":"GET /mine 200 - 409ms","service":"auth-service","timestamp":"2026-03-05T19:39:43.823Z"}
+{"level":"info","message":"PATCH /69a9d3ff79f05abf55b0fb28/status 200 - 370ms","service":"auth-service","timestamp":"2026-03-05T19:41:51.250Z"}
+{"level":"info","message":"GET /mine 200 - 432ms","service":"auth-service","timestamp":"2026-03-05T19:41:51.694Z"}
+{"level":"info","message":"PATCH /69a9d3ff79f05abf55b0fb28/status 200 - 381ms","service":"auth-service","timestamp":"2026-03-05T19:41:56.484Z"}
+{"level":"info","message":"GET /mine 200 - 412ms","service":"auth-service","timestamp":"2026-03-05T19:41:56.906Z"}
+{"level":"info","message":"PATCH /69a9d3ff79f05abf55b0fb28/status 200 - 344ms","service":"auth-service","timestamp":"2026-03-05T19:42:15.712Z"}
+{"level":"info","message":"GET /mine 200 - 423ms","service":"auth-service","timestamp":"2026-03-05T19:42:16.143Z"}
+{"level":"info","message":"PATCH /69a9d3ff79f05abf55b0fb28/status 200 - 414ms","service":"auth-service","timestamp":"2026-03-05T19:43:02.542Z"}
+{"level":"info","message":"GET /mine 200 - 485ms","service":"auth-service","timestamp":"2026-03-05T19:43:03.035Z"}
+{"level":"info","message":"POST /logout 200 - 603ms","service":"auth-service","timestamp":"2026-03-05T19:43:07.321Z"}
+{"level":"info","message":"POST /signin 200 - 762ms","service":"auth-service","timestamp":"2026-03-05T19:43:15.262Z"}
+{"level":"info","message":"POST /verify-otp 200 - 609ms","service":"auth-service","timestamp":"2026-03-05T19:43:22.494Z"}
+{"level":"info","message":"GET / 200 - 367ms","service":"auth-service","timestamp":"2026-03-05T19:43:22.896Z"}
+{"level":"info","message":"GET /mine 200 - 373ms","service":"auth-service","timestamp":"2026-03-05T19:43:22.899Z"}
+{"level":"info","message":"GET / 304 - 348ms","service":"auth-service","timestamp":"2026-03-05T19:43:23.249Z"}
+{"level":"info","message":"GET /mine 200 - 349ms","service":"auth-service","timestamp":"2026-03-05T19:43:23.251Z"}
+{"level":"info","message":"GET /mine 200 - 504ms","service":"auth-service","timestamp":"2026-03-05T19:43:27.261Z"}
+{"level":"info","message":"GET / 304 - 506ms","service":"auth-service","timestamp":"2026-03-05T19:43:27.264Z"}
+{"level":"info","message":"GET / 304 - 383ms","service":"auth-service","timestamp":"2026-03-05T19:43:27.650Z"}
+{"level":"info","message":"GET /mine 200 - 387ms","service":"auth-service","timestamp":"2026-03-05T19:43:27.652Z"}
+{"level":"info","message":"GET / 200 - 402ms","service":"auth-service","timestamp":"2026-03-05T19:43:29.462Z"}
+{"level":"info","message":"GET / 304 - 409ms","service":"auth-service","timestamp":"2026-03-05T19:43:29.873Z"}
+{"level":"info","message":"POST /logout 200 - 478ms","service":"auth-service","timestamp":"2026-03-05T19:43:49.042Z"}
+{"level":"info","message":"POST /signin 200 - 545ms","service":"auth-service","timestamp":"2026-03-05T19:43:58.534Z"}
+{"level":"info","message":"POST /verify-otp 200 - 542ms","service":"auth-service","timestamp":"2026-03-05T19:44:04.845Z"}
+{"level":"info","message":"GET / 200 - 352ms","service":"auth-service","timestamp":"2026-03-05T19:44:05.221Z"}
+{"level":"info","message":"GET /mine 200 - 404ms","service":"auth-service","timestamp":"2026-03-05T19:44:05.273Z"}
+{"level":"info","message":"GET / 304 - 398ms","service":"auth-service","timestamp":"2026-03-05T19:44:05.622Z"}
+{"level":"info","message":"GET /mine 200 - 446ms","service":"auth-service","timestamp":"2026-03-05T19:44:05.721Z"}
+{"level":"info","message":"GET /mine 200 - 436ms","service":"auth-service","timestamp":"2026-03-05T19:44:08.189Z"}
+{"level":"info","message":"GET /mine 200 - 409ms","service":"auth-service","timestamp":"2026-03-05T19:44:08.602Z"}
+{"level":"info","message":"GET /mine 200 - 396ms","service":"auth-service","timestamp":"2026-03-05T19:44:27.794Z"}
+{"level":"info","message":"GET /mine 200 - 400ms","service":"auth-service","timestamp":"2026-03-05T19:44:31.768Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-05T19:44:36.582Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-05T19:44:37.370Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-05T19:44:37.371Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-05T19:44:37.953Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-05T19:44:37.955Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-05T19:44:37.972Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-05T19:44:39.040Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-05T19:44:41.022Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-05T19:44:41.666Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-05T19:44:41.667Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-05T19:44:42.171Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-05T19:44:42.173Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-05T19:44:42.187Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-05T19:44:42.794Z"}
+{"level":"info","message":"PATCH /69a9d3ff79f05abf55b0fb28/status 200 - 560ms","service":"auth-service","timestamp":"2026-03-05T19:44:56.649Z"}
+{"level":"info","message":"GET /mine 200 - 655ms","service":"auth-service","timestamp":"2026-03-05T19:44:57.318Z"}
+{"level":"error","message":"🛑 Gracefully shutting down...","service":"auth-service","timestamp":"2026-03-05T19:46:10.071Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-05T20:00:47.581Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-00.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-05T20:00:48.310Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-05T20:00:48.310Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-05T20:00:48.878Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-05T20:00:48.892Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-05T20:00:48.913Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-05T20:00:50.164Z"}
+{"level":"info","message":"POST /signin 200 - 1072ms","service":"auth-service","timestamp":"2026-03-05T20:00:57.340Z"}
+{"level":"info","message":"POST /verify-otp 200 - 573ms","service":"auth-service","timestamp":"2026-03-05T20:01:01.623Z"}
+{"level":"info","message":"GET / 200 - 376ms","service":"auth-service","timestamp":"2026-03-05T20:01:02.024Z"}
+{"level":"info","message":"GET /mine 200 - 435ms","service":"auth-service","timestamp":"2026-03-05T20:01:02.080Z"}
+{"level":"info","message":"GET / 304 - 371ms","service":"auth-service","timestamp":"2026-03-05T20:01:02.397Z"}
+{"level":"info","message":"GET /mine 200 - 409ms","service":"auth-service","timestamp":"2026-03-05T20:01:02.491Z"}
+{"level":"info","message":"GET /mine 200 - 416ms","service":"auth-service","timestamp":"2026-03-05T20:01:04.087Z"}
+{"level":"info","message":"GET /mine 200 - 403ms","service":"auth-service","timestamp":"2026-03-05T20:01:04.494Z"}
+{"level":"info","message":"GET /status 200 - 350ms","service":"auth-service","timestamp":"2026-03-05T20:01:15.757Z"}
+{"level":"info","message":"GET /status 304 - 349ms","service":"auth-service","timestamp":"2026-03-05T20:01:16.107Z"}
+{"level":"error","message":"🛑 Gracefully shutting down...","service":"auth-service","timestamp":"2026-03-05T20:01:19.921Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-05T20:02:11.848Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-05T20:02:12.494Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-05T20:02:12.494Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-05T20:02:13.111Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-05T20:02:13.112Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-05T20:02:13.124Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-05T20:02:13.705Z"}
+{"level":"info","message":"GET /mine 200 - 468ms","service":"auth-service","timestamp":"2026-03-05T20:02:16.072Z"}
+{"level":"info","message":"GET /mine 200 - 432ms","service":"auth-service","timestamp":"2026-03-05T20:02:16.507Z"}
+{"level":"info","message":"PATCH /69a9d2ce9bf64a5290dc951e/status 200 - 596ms","service":"auth-service","timestamp":"2026-03-05T20:02:20.749Z"}
+{"level":"info","message":"GET /mine 200 - 430ms","service":"auth-service","timestamp":"2026-03-05T20:02:21.184Z"}
+{"level":"info","message":"GET /69a9d3ff79f05abf55b0fb28/audit 200 - 424ms","service":"auth-service","timestamp":"2026-03-05T20:02:23.484Z"}
+{"level":"info","message":"GET /69a9d2ce9bf64a5290dc951e/audit 200 - 428ms","service":"auth-service","timestamp":"2026-03-05T20:02:26.416Z"}
+{"level":"error","message":"🛑 Gracefully shutting down...","service":"auth-service","timestamp":"2026-03-05T20:03:05.186Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-05T20:03:08.844Z"}
+{"level":"error","message":"🛑 Gracefully shutting down...","service":"auth-service","timestamp":"2026-03-05T20:03:09.091Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-01.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-05T20:03:09.605Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-05T20:03:49.824Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-01.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-05T20:03:50.483Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-05T20:03:50.484Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-05T20:03:51.085Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-05T20:03:51.086Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-05T20:03:51.100Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-05T20:03:51.957Z"}
+{"level":"info","message":"PATCH /69a9d2ce9bf64a5290dc951e/status 200 - 583ms","service":"auth-service","timestamp":"2026-03-05T20:04:01.841Z"}
+{"level":"info","message":"GET /mine 200 - 441ms","service":"auth-service","timestamp":"2026-03-05T20:04:02.287Z"}
+{"level":"info","message":"GET /69a9d2ce9bf64a5290dc951e/audit 200 - 420ms","service":"auth-service","timestamp":"2026-03-05T20:04:07.431Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-06T06:14:42.201Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-06T06:14:43.468Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-06T06:14:43.469Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-06T06:14:44.298Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-06T06:14:44.299Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-06T06:14:44.315Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-06T06:14:45.381Z"}
+{"level":"error","message":"🛑 Gracefully shutting down...","service":"auth-service","timestamp":"2026-03-06T06:14:55.347Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-06T06:15:05.234Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-06T06:15:06.524Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-06T06:15:06.525Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-06T06:15:07.546Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-06T06:15:07.547Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-06T06:15:07.564Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-06T06:15:08.233Z"}
+{"level":"info","message":"POST /signin 200 - 1485ms","service":"auth-service","timestamp":"2026-03-06T06:28:06.205Z"}
+{"level":"info","message":"POST /verify-otp 200 - 728ms","service":"auth-service","timestamp":"2026-03-06T06:28:10.899Z"}
+{"level":"info","message":"GET / 200 - 776ms","service":"auth-service","timestamp":"2026-03-06T06:28:12.403Z"}
+{"level":"info","message":"GET /mine 200 - 834ms","service":"auth-service","timestamp":"2026-03-06T06:28:12.459Z"}
+{"level":"info","message":"GET / 304 - 364ms","service":"auth-service","timestamp":"2026-03-06T06:28:12.773Z"}
+{"level":"info","message":"GET /mine 200 - 381ms","service":"auth-service","timestamp":"2026-03-06T06:28:12.843Z"}
+{"level":"info","message":"GET /mine 200 - 409ms","service":"auth-service","timestamp":"2026-03-06T06:28:14.671Z"}
+{"level":"info","message":"GET /mine 200 - 614ms","service":"auth-service","timestamp":"2026-03-06T06:28:15.290Z"}
+{"level":"info","message":"GET /mine 200 - 408ms","service":"auth-service","timestamp":"2026-03-06T06:28:20.850Z"}
+{"level":"info","message":"GET /mine 200 - 402ms","service":"auth-service","timestamp":"2026-03-06T06:28:21.259Z"}
+{"level":"info","message":"GET / 200 - 478ms","service":"auth-service","timestamp":"2026-03-06T06:28:21.954Z"}
+{"level":"info","message":"GET / 304 - 483ms","service":"auth-service","timestamp":"2026-03-06T06:28:22.441Z"}
+{"level":"info","message":"GET /mine 200 - 394ms","service":"auth-service","timestamp":"2026-03-06T06:28:23.111Z"}
+{"level":"info","message":"GET /mine 200 - 459ms","service":"auth-service","timestamp":"2026-03-06T06:28:23.573Z"}
+{"level":"info","message":"GET /mine 200 - 555ms","service":"auth-service","timestamp":"2026-03-06T06:28:41.824Z"}
+{"level":"info","message":"GET /mine 200 - 553ms","service":"auth-service","timestamp":"2026-03-06T06:28:42.389Z"}
+{"level":"info","message":"GET /mine 200 - 480ms","service":"auth-service","timestamp":"2026-03-06T06:29:04.446Z"}
+{"level":"info","message":"GET /mine 200 - 422ms","service":"auth-service","timestamp":"2026-03-06T06:29:04.870Z"}
+{"level":"info","message":"GET / 304 - 525ms","service":"auth-service","timestamp":"2026-03-06T06:29:07.367Z"}
+{"level":"info","message":"GET / 304 - 559ms","service":"auth-service","timestamp":"2026-03-06T06:29:07.937Z"}
+{"level":"info","message":"GET /verifications 200 - 472ms","service":"auth-service","timestamp":"2026-03-06T06:29:46.869Z"}
+{"level":"info","message":"GET /verifications 304 - 404ms","service":"auth-service","timestamp":"2026-03-06T06:29:47.276Z"}
+{"level":"info","message":"GET /verifications 304 - 428ms","service":"auth-service","timestamp":"2026-03-06T06:29:51.107Z"}
+{"level":"info","message":"GET /users 200 - 335ms","service":"auth-service","timestamp":"2026-03-06T06:29:52.551Z"}
+{"level":"info","message":"GET /users 304 - 351ms","service":"auth-service","timestamp":"2026-03-06T06:30:13.945Z"}
+{"level":"info","message":"GET /verifications 304 - 420ms","service":"auth-service","timestamp":"2026-03-06T06:30:22.102Z"}
+{"level":"info","message":"GET /users 304 - 335ms","service":"auth-service","timestamp":"2026-03-06T06:30:23.867Z"}
+{"level":"info","message":"GET /mine 200 - 1343ms","service":"auth-service","timestamp":"2026-03-06T06:38:07.607Z"}
+{"level":"info","message":"GET /mine 200 - 635ms","service":"auth-service","timestamp":"2026-03-06T06:38:08.251Z"}
+{"level":"info","message":"GET /mine 200 - 419ms","service":"auth-service","timestamp":"2026-03-06T06:40:04.457Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-06T06:40:19.942Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-01.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-06T06:40:20.748Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-06T06:40:20.749Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-06T06:40:21.372Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-06T06:40:21.373Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-06T06:40:21.405Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-06T06:40:22.176Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-06T06:40:26.657Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-01.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-06T06:40:27.541Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-06T06:40:27.543Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-06T06:40:28.356Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-06T06:40:28.357Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-06T06:40:28.385Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-06T06:40:28.988Z"}
+{"level":"info","message":"GET /mine 200 - 441ms","service":"auth-service","timestamp":"2026-03-06T06:42:08.681Z"}
+{"level":"info","message":"GET / 304 - 455ms","service":"auth-service","timestamp":"2026-03-06T06:42:08.705Z"}
+{"level":"info","message":"GET / 304 - 389ms","service":"auth-service","timestamp":"2026-03-06T06:42:09.103Z"}
+{"level":"info","message":"GET /mine 200 - 408ms","service":"auth-service","timestamp":"2026-03-06T06:42:09.121Z"}
+{"level":"info","message":"POST /logout 200 - 594ms","service":"auth-service","timestamp":"2026-03-06T06:42:11.508Z"}
+{"level":"info","message":"POST /signin 200 - 575ms","service":"auth-service","timestamp":"2026-03-06T06:42:26.742Z"}
+{"level":"info","message":"POST /verify-otp 200 - 885ms","service":"auth-service","timestamp":"2026-03-06T06:42:31.918Z"}
+{"level":"info","message":"GET / 304 - 637ms","service":"auth-service","timestamp":"2026-03-06T06:42:32.824Z"}
+{"level":"info","message":"GET /mine 200 - 845ms","service":"auth-service","timestamp":"2026-03-06T06:42:32.829Z"}
+{"level":"info","message":"GET / 304 - 499ms","service":"auth-service","timestamp":"2026-03-06T06:42:33.345Z"}
+{"level":"info","message":"GET /mine 200 - 589ms","service":"auth-service","timestamp":"2026-03-06T06:42:33.435Z"}
+{"level":"info","message":"GET /mine 200 - 389ms","service":"auth-service","timestamp":"2026-03-06T06:42:35.495Z"}
+{"level":"info","message":"GET / 304 - 394ms","service":"auth-service","timestamp":"2026-03-06T06:42:35.501Z"}
+{"level":"info","message":"GET / 304 - 378ms","service":"auth-service","timestamp":"2026-03-06T06:42:35.890Z"}
+{"level":"info","message":"GET /mine 200 - 384ms","service":"auth-service","timestamp":"2026-03-06T06:42:35.895Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-06T06:43:20.600Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-06T06:43:21.496Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-06T06:43:21.497Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-06T06:43:22.156Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-06T06:43:22.157Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-06T06:43:22.184Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-06T06:43:22.902Z"}
+{"level":"info","message":"GET / 304 - 430ms","service":"auth-service","timestamp":"2026-03-06T06:43:32.923Z"}
+{"level":"info","message":"GET /mine 200 - 663ms","service":"auth-service","timestamp":"2026-03-06T06:43:33.116Z"}
+{"level":"info","message":"GET / 304 - 386ms","service":"auth-service","timestamp":"2026-03-06T06:43:33.316Z"}
+{"level":"info","message":"GET /mine 200 - 366ms","service":"auth-service","timestamp":"2026-03-06T06:43:33.510Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-06T06:51:23.123Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-00.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-06T06:51:23.944Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-06T06:51:23.947Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-06T06:51:24.568Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-06T06:51:24.571Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-06T06:51:24.605Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-06T06:51:25.497Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-06T06:51:32.636Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-00.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-06T06:51:33.459Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-06T06:51:33.472Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-06T06:51:34.141Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-06T06:51:34.143Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-06T06:51:34.173Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-06T06:51:34.848Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-06T07:03:34.060Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-06T07:03:34.889Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-06T07:03:34.890Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-06T07:03:35.524Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-06T07:03:35.526Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-06T07:03:35.557Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-06T07:03:36.331Z"}
+{"level":"info","message":"POST /signin 200 - 1343ms","service":"auth-service","timestamp":"2026-03-06T07:03:41.461Z"}
+{"level":"info","message":"POST /verify-otp 200 - 680ms","service":"auth-service","timestamp":"2026-03-06T07:03:47.989Z"}
+{"level":"info","message":"GET / 304 - 417ms","service":"auth-service","timestamp":"2026-03-06T07:03:48.540Z"}
+{"level":"info","message":"GET /stats 200 - 914ms","service":"auth-service","timestamp":"2026-03-06T07:03:49.051Z"}
+{"level":"info","message":"GET / 304 - 531ms","service":"auth-service","timestamp":"2026-03-06T07:03:49.081Z"}
+{"level":"info","message":"GET /stats 304 - 777ms","service":"auth-service","timestamp":"2026-03-06T07:03:49.832Z"}
+{"level":"info","message":"GET / 304 - 481ms","service":"auth-service","timestamp":"2026-03-06T07:03:54.312Z"}
+{"level":"info","message":"GET / 304 - 413ms","service":"auth-service","timestamp":"2026-03-06T07:03:54.782Z"}
+{"level":"info","message":"GET /mine 200 - 407ms","service":"auth-service","timestamp":"2026-03-06T07:04:01.312Z"}
+{"level":"info","message":"GET /mine 200 - 418ms","service":"auth-service","timestamp":"2026-03-06T07:04:01.736Z"}
+{"level":"info","message":"GET /mine 200 - 471ms","service":"auth-service","timestamp":"2026-03-06T07:04:06.549Z"}
+{"level":"info","message":"GET /mine 200 - 392ms","service":"auth-service","timestamp":"2026-03-06T07:04:06.945Z"}
+{"level":"info","message":"GET / 304 - 463ms","service":"auth-service","timestamp":"2026-03-06T07:04:10.900Z"}
+{"level":"info","message":"GET / 304 - 531ms","service":"auth-service","timestamp":"2026-03-06T07:04:11.434Z"}
+{"level":"info","message":"GET /mine 200 - 405ms","service":"auth-service","timestamp":"2026-03-06T07:04:56.199Z"}
+{"level":"info","message":"GET /mine 200 - 411ms","service":"auth-service","timestamp":"2026-03-06T07:04:56.612Z"}
+{"level":"info","message":"GET /mine 200 - 366ms","service":"auth-service","timestamp":"2026-03-06T07:05:34.349Z"}
+{"level":"info","message":"GET /mine 200 - 385ms","service":"auth-service","timestamp":"2026-03-06T07:05:59.369Z"}
+{"level":"info","message":"GET /verifications 304 - 1185ms","service":"auth-service","timestamp":"2026-03-06T07:06:14.788Z"}
+{"level":"info","message":"GET /verifications 304 - 484ms","service":"auth-service","timestamp":"2026-03-06T07:06:15.275Z"}
+{"level":"info","message":"GET / 304 - 901ms","service":"auth-service","timestamp":"2026-03-06T07:06:28.532Z"}
+{"level":"info","message":"GET / 304 - 534ms","service":"auth-service","timestamp":"2026-03-06T07:06:29.071Z"}
+{"level":"info","message":"GET /stats 304 - 874ms","service":"auth-service","timestamp":"2026-03-06T07:06:30.951Z"}
+{"level":"info","message":"GET /stats 304 - 781ms","service":"auth-service","timestamp":"2026-03-06T07:06:31.735Z"}
+{"level":"info","message":"GET /verifications 304 - 411ms","service":"auth-service","timestamp":"2026-03-06T07:07:04.952Z"}
+{"level":"info","message":"GET /verifications 304 - 465ms","service":"auth-service","timestamp":"2026-03-06T07:07:05.421Z"}
+{"level":"info","message":"GET /stats 304 - 1013ms","service":"auth-service","timestamp":"2026-03-06T07:07:07.305Z"}
+{"level":"info","message":"GET /stats 304 - 747ms","service":"auth-service","timestamp":"2026-03-06T07:07:08.056Z"}
+{"level":"info","message":"GET / 304 - 352ms","service":"auth-service","timestamp":"2026-03-06T07:11:23.954Z"}
+{"level":"info","message":"GET / 304 - 353ms","service":"auth-service","timestamp":"2026-03-06T07:11:24.312Z"}
+{"level":"info","message":"GET /stats 304 - 769ms","service":"auth-service","timestamp":"2026-03-06T07:11:24.370Z"}
+{"level":"info","message":"GET /stats 304 - 853ms","service":"auth-service","timestamp":"2026-03-06T07:11:25.226Z"}
+{"level":"info","message":"GET / 304 - 358ms","service":"auth-service","timestamp":"2026-03-06T07:11:27.074Z"}
+{"level":"info","message":"GET / 304 - 346ms","service":"auth-service","timestamp":"2026-03-06T07:11:27.423Z"}
+{"level":"info","message":"GET /stats 304 - 740ms","service":"auth-service","timestamp":"2026-03-06T07:11:27.455Z"}
+{"level":"info","message":"GET /stats 304 - 754ms","service":"auth-service","timestamp":"2026-03-06T07:11:28.212Z"}
+{"level":"info","message":"GET /stats 304 - 741ms","service":"auth-service","timestamp":"2026-03-06T07:12:12.724Z"}
+{"level":"info","message":"GET /stats 304 - 739ms","service":"auth-service","timestamp":"2026-03-06T07:12:13.466Z"}
+{"level":"info","message":"GET / 304 - 428ms","service":"auth-service","timestamp":"2026-03-06T07:16:45.044Z"}
+{"level":"info","message":"GET / 304 - 411ms","service":"auth-service","timestamp":"2026-03-06T07:16:45.457Z"}
+{"level":"info","message":"GET /mine 200 - 375ms","service":"auth-service","timestamp":"2026-03-06T07:16:47.177Z"}
+{"level":"info","message":"GET /mine 200 - 360ms","service":"auth-service","timestamp":"2026-03-06T07:16:47.540Z"}
+{"level":"info","message":"GET /stats 304 - 775ms","service":"auth-service","timestamp":"2026-03-06T07:16:47.579Z"}
+{"level":"info","message":"GET /stats 304 - 762ms","service":"auth-service","timestamp":"2026-03-06T07:16:48.344Z"}
+{"code":"ECONNRESET","errno":-4077,"level":"error","message":"❌ Redis Client Error: read ECONNRESET","service":"auth-service","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)","syscall":"read","timestamp":"2026-03-06T08:58:39.007Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com","level":"error","message":"❌ Redis Client Error: getaddrinfo ENOTFOUND redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com","service":"auth-service","stack":"Error: getaddrinfo ENOTFOUND redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)","syscall":"getaddrinfo","timestamp":"2026-03-06T08:58:39.042Z"}
+{"level":"info","message":"GET /mine 401 - 277ms","service":"auth-service","timestamp":"2026-03-06T08:58:46.906Z"}
+{"level":"info","message":"GET / 401 - 278ms","service":"auth-service","timestamp":"2026-03-06T08:58:46.907Z"}
+{"level":"info","message":"GET /stats 401 - 547ms","service":"auth-service","timestamp":"2026-03-06T08:58:47.174Z"}
+{"level":"info","message":"GET /mine 401 - 266ms","service":"auth-service","timestamp":"2026-03-06T08:58:47.175Z"}
+{"level":"info","message":"GET / 401 - 265ms","service":"auth-service","timestamp":"2026-03-06T08:58:47.176Z"}
+{"level":"info","message":"GET /stats 401 - 268ms","service":"auth-service","timestamp":"2026-03-06T08:58:47.445Z"}
+{"level":"error","message":"❌ MongoDB disconnected. Shutting down...","service":"auth-service","timestamp":"2026-03-06T08:58:49.388Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-06T08:59:15.344Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-01.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-06T08:59:16.013Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-06T08:59:16.013Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-06T08:59:16.594Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-06T08:59:16.595Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-06T08:59:16.617Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-06T08:59:17.553Z"}
+{"level":"info","message":"POST /signin 200 - 1384ms","service":"auth-service","timestamp":"2026-03-06T08:59:21.850Z"}
+{"level":"info","message":"POST /verify-otp 200 - 666ms","service":"auth-service","timestamp":"2026-03-06T08:59:26.185Z"}
+{"level":"info","message":"GET / 304 - 362ms","service":"auth-service","timestamp":"2026-03-06T08:59:26.682Z"}
+{"level":"info","message":"GET /mine 200 - 446ms","service":"auth-service","timestamp":"2026-03-06T08:59:26.773Z"}
+{"level":"info","message":"GET / 304 - 429ms","service":"auth-service","timestamp":"2026-03-06T08:59:27.130Z"}
+{"level":"info","message":"GET /mine 200 - 471ms","service":"auth-service","timestamp":"2026-03-06T08:59:27.299Z"}
+{"level":"info","message":"GET /stats 304 - 1035ms","service":"auth-service","timestamp":"2026-03-06T08:59:27.353Z"}
+{"level":"info","message":"GET /stats 304 - 1059ms","service":"auth-service","timestamp":"2026-03-06T08:59:28.414Z"}
+{"level":"info","message":"GET /verifications 304 - 557ms","service":"auth-service","timestamp":"2026-03-06T08:59:36.698Z"}
+{"level":"info","message":"GET /verifications 304 - 432ms","service":"auth-service","timestamp":"2026-03-06T08:59:37.132Z"}
+{"level":"info","message":"GET / 304 - 522ms","service":"auth-service","timestamp":"2026-03-06T08:59:37.696Z"}
+{"level":"info","message":"GET / 304 - 453ms","service":"auth-service","timestamp":"2026-03-06T08:59:38.157Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-06T09:07:54.229Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-01.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-06T09:07:57.453Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-06T09:07:57.458Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-06T09:07:58.605Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-06T09:07:58.613Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-06T09:07:58.965Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-06T09:08:00.680Z"}
+{"level":"info","message":"POST /logout 200 - 746ms","service":"auth-service","timestamp":"2026-03-06T09:10:46.431Z"}
+{"level":"info","message":"POST /signin 200 - 893ms","service":"auth-service","timestamp":"2026-03-06T09:10:53.632Z"}
+{"level":"info","message":"POST /verify-otp 200 - 771ms","service":"auth-service","timestamp":"2026-03-06T09:10:58.014Z"}
+{"level":"info","message":"GET / 200 - 485ms","service":"auth-service","timestamp":"2026-03-06T09:10:58.558Z"}
+{"level":"info","message":"GET /mine 200 - 555ms","service":"auth-service","timestamp":"2026-03-06T09:10:58.628Z"}
+{"level":"info","message":"GET / 304 - 554ms","service":"auth-service","timestamp":"2026-03-06T09:10:59.115Z"}
+{"level":"info","message":"GET /mine 200 - 548ms","service":"auth-service","timestamp":"2026-03-06T09:10:59.183Z"}
+{"level":"info","message":"GET /mine 200 - 527ms","service":"auth-service","timestamp":"2026-03-06T09:11:07.487Z"}
+{"level":"info","message":"GET /mine 200 - 509ms","service":"auth-service","timestamp":"2026-03-06T09:11:08.025Z"}
+{"level":"info","message":"GET /69a9d2ce9bf64a5290dc951e/audit 200 - 583ms","service":"auth-service","timestamp":"2026-03-06T09:11:29.408Z"}
+{"level":"info","message":"GET /mine 200 - 451ms","service":"auth-service","timestamp":"2026-03-06T09:12:18.448Z"}
+{"level":"info","message":"GET /mine 200 - 649ms","service":"auth-service","timestamp":"2026-03-06T09:21:01.654Z"}
+{"level":"info","message":"GET /mine 200 - 450ms","service":"auth-service","timestamp":"2026-03-06T09:21:05.480Z"}
+{"level":"info","message":"GET /mine 200 - 425ms","service":"auth-service","timestamp":"2026-03-06T09:21:17.405Z"}
+{"level":"info","message":"PATCH /69a9d2ce9bf64a5290dc951e 200 - 936ms","service":"auth-service","timestamp":"2026-03-06T09:22:45.029Z"}
+{"level":"info","message":"GET /mine 200 - 407ms","service":"auth-service","timestamp":"2026-03-06T09:22:45.460Z"}
+{"level":"info","message":"GET /mine 401 - 263ms","service":"auth-service","timestamp":"2026-03-06T09:33:55.263Z"}
+{"level":"info","message":"GET /mine 401 - 252ms","service":"auth-service","timestamp":"2026-03-06T09:34:04.287Z"}
+{"level":"info","message":"GET /mine 401 - 394ms","service":"auth-service","timestamp":"2026-03-06T09:34:22.451Z"}
+{"level":"info","message":"GET /mine 401 - 671ms","service":"auth-service","timestamp":"2026-03-06T09:39:07.681Z"}
+{"level":"info","message":"GET /mine 401 - 306ms","service":"auth-service","timestamp":"2026-03-06T09:40:21.314Z"}
+{"level":"info","message":"POST /logout 200 - 600ms","service":"auth-service","timestamp":"2026-03-06T09:42:07.347Z"}
+{"level":"info","message":"POST /signin 200 - 1038ms","service":"auth-service","timestamp":"2026-03-06T09:42:14.736Z"}
+{"level":"info","message":"POST /verify-otp 200 - 711ms","service":"auth-service","timestamp":"2026-03-06T09:42:18.774Z"}
+{"level":"info","message":"GET / 200 - 385ms","service":"auth-service","timestamp":"2026-03-06T09:42:19.198Z"}
+{"level":"info","message":"GET /mine 200 - 390ms","service":"auth-service","timestamp":"2026-03-06T09:42:19.201Z"}
+{"level":"info","message":"GET / 304 - 386ms","service":"auth-service","timestamp":"2026-03-06T09:42:19.589Z"}
+{"level":"info","message":"GET /mine 200 - 393ms","service":"auth-service","timestamp":"2026-03-06T09:42:19.597Z"}
+{"level":"info","message":"GET / 200 - 468ms","service":"auth-service","timestamp":"2026-03-06T09:42:23.265Z"}
+{"level":"info","message":"GET / 304 - 474ms","service":"auth-service","timestamp":"2026-03-06T09:42:23.743Z"}
+{"level":"info","message":"GET /mine 200 - 372ms","service":"auth-service","timestamp":"2026-03-06T09:42:39.602Z"}
+{"level":"info","message":"GET /mine 200 - 390ms","service":"auth-service","timestamp":"2026-03-06T09:42:39.994Z"}
+{"level":"info","message":"GET / 304 - 348ms","service":"auth-service","timestamp":"2026-03-06T09:42:41.528Z"}
+{"level":"info","message":"GET /mine 200 - 353ms","service":"auth-service","timestamp":"2026-03-06T09:42:41.529Z"}
+{"level":"info","message":"GET /mine 200 - 367ms","service":"auth-service","timestamp":"2026-03-06T09:42:41.898Z"}
+{"level":"info","message":"GET / 304 - 371ms","service":"auth-service","timestamp":"2026-03-06T09:42:41.901Z"}
+{"level":"info","message":"GET / 304 - 423ms","service":"auth-service","timestamp":"2026-03-06T09:43:32.142Z"}
+{"level":"info","message":"GET / 304 - 427ms","service":"auth-service","timestamp":"2026-03-06T09:43:32.571Z"}
+{"code":"ECONNRESET","errno":-4077,"level":"error","message":"❌ Redis Client Error: read ECONNRESET","service":"auth-service","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)","syscall":"read","timestamp":"2026-03-06T10:09:22.458Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com","level":"error","message":"❌ Redis Client Error: getaddrinfo ENOTFOUND redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com","service":"auth-service","stack":"Error: getaddrinfo ENOTFOUND redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)","syscall":"getaddrinfo","timestamp":"2026-03-06T10:09:22.628Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com","level":"error","message":"❌ Redis Client Error: getaddrinfo ENOTFOUND redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com","service":"auth-service","stack":"Error: getaddrinfo ENOTFOUND redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)","syscall":"getaddrinfo","timestamp":"2026-03-06T10:09:22.863Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com","level":"error","message":"❌ Redis Client Error: getaddrinfo ENOTFOUND redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com","service":"auth-service","stack":"Error: getaddrinfo ENOTFOUND redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)","syscall":"getaddrinfo","timestamp":"2026-03-06T10:09:23.186Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com","level":"error","message":"❌ Redis Client Error: getaddrinfo ENOTFOUND redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com","service":"auth-service","stack":"Error: getaddrinfo ENOTFOUND redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)","syscall":"getaddrinfo","timestamp":"2026-03-06T10:09:23.570Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com","level":"error","message":"❌ Redis Client Error: getaddrinfo ENOTFOUND redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com","service":"auth-service","stack":"Error: getaddrinfo ENOTFOUND redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)","syscall":"getaddrinfo","timestamp":"2026-03-06T10:09:23.986Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com","level":"error","message":"❌ Redis Client Error: getaddrinfo ENOTFOUND redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com","service":"auth-service","stack":"Error: getaddrinfo ENOTFOUND redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)","syscall":"getaddrinfo","timestamp":"2026-03-06T10:09:24.886Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com","level":"error","message":"❌ Redis Client Error: getaddrinfo ENOTFOUND redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com","service":"auth-service","stack":"Error: getaddrinfo ENOTFOUND redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)","syscall":"getaddrinfo","timestamp":"2026-03-06T10:09:26.691Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com","level":"error","message":"❌ Redis Client Error: getaddrinfo ENOTFOUND redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com","service":"auth-service","stack":"Error: getaddrinfo ENOTFOUND redis-14122.crce220.us-east-1-4.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)","syscall":"getaddrinfo","timestamp":"2026-03-06T10:18:36.727Z"}
+{"level":"info","message":"GET / 401 - 299ms","service":"auth-service","timestamp":"2026-03-06T10:18:47.645Z"}
+{"level":"info","message":"GET /mine 401 - 607ms","service":"auth-service","timestamp":"2026-03-06T10:18:47.948Z"}
+{"level":"info","message":"GET / 401 - 283ms","service":"auth-service","timestamp":"2026-03-06T10:18:48.014Z"}
+{"level":"info","message":"GET /mine 401 - 250ms","service":"auth-service","timestamp":"2026-03-06T10:18:48.202Z"}
+{"level":"info","message":"GET / 401 - 273ms","service":"auth-service","timestamp":"2026-03-06T10:18:49.685Z"}
+{"level":"info","message":"GET / 401 - 342ms","service":"auth-service","timestamp":"2026-03-06T10:18:50.042Z"}
+{"level":"info","message":"POST /logout 200 - 579ms","service":"auth-service","timestamp":"2026-03-06T10:18:53.456Z"}
+{"level":"info","message":"POST /signin 200 - 1653ms","service":"auth-service","timestamp":"2026-03-06T10:19:07.806Z"}
+{"level":"info","message":"POST /verify-otp 200 - 735ms","service":"auth-service","timestamp":"2026-03-06T10:19:11.969Z"}
+{"level":"info","message":"GET /mine 200 - 574ms","service":"auth-service","timestamp":"2026-03-06T10:19:12.591Z"}
+{"level":"info","message":"GET / 200 - 861ms","service":"auth-service","timestamp":"2026-03-06T10:19:12.894Z"}
+{"level":"info","message":"GET /mine 200 - 483ms","service":"auth-service","timestamp":"2026-03-06T10:19:13.077Z"}
+{"level":"info","message":"GET / 304 - 360ms","service":"auth-service","timestamp":"2026-03-06T10:19:13.263Z"}
+{"level":"info","message":"GET /mine 200 - 422ms","service":"auth-service","timestamp":"2026-03-06T10:19:18.608Z"}
+{"level":"info","message":"GET /mine 200 - 464ms","service":"auth-service","timestamp":"2026-03-06T10:19:19.075Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-06T10:27:05.686Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-06T10:27:06.475Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-06T10:27:06.476Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-06T10:27:07.178Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-06T10:27:07.186Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-06T10:27:07.670Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-06T10:27:08.604Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-06T10:27:19.591Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-06T10:27:20.242Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-06T10:27:20.242Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-06T10:27:20.850Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-06T10:27:20.864Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-06T10:27:21.348Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-06T10:27:22.087Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-06T10:27:28.377Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-06T10:27:29.097Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-06T10:27:29.098Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-06T10:27:29.792Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-06T10:27:29.795Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-06T10:27:29.870Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-06T10:27:30.229Z"}
+{"level":"info","message":"GET /mine 200 - 488ms","service":"auth-service","timestamp":"2026-03-06T10:27:51.498Z"}
+{"level":"info","message":"GET /mine 200 - 476ms","service":"auth-service","timestamp":"2026-03-06T10:28:06.459Z"}
+{"level":"info","message":"GET /mine 200 - 420ms","service":"auth-service","timestamp":"2026-03-06T10:28:22.423Z"}
+{"level":"info","message":"GET /mine 200 - 451ms","service":"auth-service","timestamp":"2026-03-06T10:28:32.432Z"}
+{"level":"info","message":"GET /mine 200 - 462ms","service":"auth-service","timestamp":"2026-03-06T10:29:00.599Z"}
+{"level":"info","message":"GET /mine 200 - 454ms","service":"auth-service","timestamp":"2026-03-06T10:29:18.437Z"}
+{"level":"info","message":"GET /mine 200 - 476ms","service":"auth-service","timestamp":"2026-03-06T10:29:40.465Z"}
+{"level":"info","message":"GET /mine 200 - 541ms","service":"auth-service","timestamp":"2026-03-06T10:29:51.519Z"}
+{"level":"info","message":"GET /mine 200 - 422ms","service":"auth-service","timestamp":"2026-03-06T10:29:56.410Z"}
+{"level":"info","message":"GET /mine 200 - 463ms","service":"auth-service","timestamp":"2026-03-06T10:30:00.451Z"}
+{"level":"info","message":"POST /upload 200 - 1087ms","service":"auth-service","timestamp":"2026-03-06T10:31:59.537Z"}
+{"level":"info","message":"POST / 201 - 598ms","service":"auth-service","timestamp":"2026-03-06T10:33:06.889Z"}
+{"level":"info","message":"GET /mine 200 - 502ms","service":"auth-service","timestamp":"2026-03-06T10:33:07.394Z"}
+{"level":"info","message":"GET / 401 - 272ms","service":"auth-service","timestamp":"2026-03-06T10:39:27.263Z"}
+{"level":"info","message":"GET /mine 401 - 575ms","service":"auth-service","timestamp":"2026-03-06T10:39:27.550Z"}
+{"level":"info","message":"GET / 401 - 247ms","service":"auth-service","timestamp":"2026-03-06T10:39:27.607Z"}
+{"level":"info","message":"GET /mine 401 - 282ms","service":"auth-service","timestamp":"2026-03-06T10:39:27.835Z"}
+{"level":"info","message":"GET /mine 401 - 346ms","service":"auth-service","timestamp":"2026-03-06T10:39:32.778Z"}
+{"level":"info","message":"GET /mine 401 - 298ms","service":"auth-service","timestamp":"2026-03-06T10:39:33.082Z"}
+{"level":"info","message":"POST /logout 200 - 583ms","service":"auth-service","timestamp":"2026-03-06T10:39:34.518Z"}
+{"level":"info","message":"POST /signin 200 - 1006ms","service":"auth-service","timestamp":"2026-03-06T10:39:42.169Z"}
+{"level":"info","message":"POST /verify-otp 200 - 646ms","service":"auth-service","timestamp":"2026-03-06T10:39:46.471Z"}
+{"level":"info","message":"GET / 304 - 389ms","service":"auth-service","timestamp":"2026-03-06T10:39:46.897Z"}
+{"level":"info","message":"GET /mine 200 - 475ms","service":"auth-service","timestamp":"2026-03-06T10:39:47.012Z"}
+{"level":"info","message":"GET / 304 - 352ms","service":"auth-service","timestamp":"2026-03-06T10:39:47.253Z"}
+{"level":"info","message":"GET /mine 200 - 401ms","service":"auth-service","timestamp":"2026-03-06T10:39:47.415Z"}
+{"level":"info","message":"GET /mine 200 - 432ms","service":"auth-service","timestamp":"2026-03-06T10:39:48.800Z"}
+{"level":"info","message":"GET /mine 200 - 513ms","service":"auth-service","timestamp":"2026-03-06T10:39:49.316Z"}
+{"level":"info","message":"POST /logout 200 - 602ms","service":"auth-service","timestamp":"2026-03-06T10:40:01.649Z"}
+{"level":"info","message":"POST /signin 200 - 635ms","service":"auth-service","timestamp":"2026-03-06T10:40:09.435Z"}
+{"level":"info","message":"POST /verify-otp 200 - 594ms","service":"auth-service","timestamp":"2026-03-06T10:40:13.414Z"}
+{"level":"info","message":"GET /mine 200 - 461ms","service":"auth-service","timestamp":"2026-03-06T10:40:13.930Z"}
+{"level":"info","message":"GET / 200 - 465ms","service":"auth-service","timestamp":"2026-03-06T10:40:13.934Z"}
+{"level":"info","message":"GET / 304 - 402ms","service":"auth-service","timestamp":"2026-03-06T10:40:14.340Z"}
+{"level":"info","message":"GET /mine 200 - 411ms","service":"auth-service","timestamp":"2026-03-06T10:40:14.348Z"}
+{"level":"info","message":"GET / 200 - 427ms","service":"auth-service","timestamp":"2026-03-06T10:40:16.762Z"}
+{"level":"info","message":"GET / 304 - 478ms","service":"auth-service","timestamp":"2026-03-06T10:40:17.249Z"}
+{"level":"info","message":"POST /logout 200 - 624ms","service":"auth-service","timestamp":"2026-03-06T10:40:28.376Z"}
+{"level":"info","message":"POST /signin 200 - 656ms","service":"auth-service","timestamp":"2026-03-06T10:40:39.690Z"}
+{"level":"info","message":"POST /verify-otp 200 - 590ms","service":"auth-service","timestamp":"2026-03-06T10:40:46.117Z"}
+{"level":"info","message":"GET / 200 - 378ms","service":"auth-service","timestamp":"2026-03-06T10:40:46.547Z"}
+{"level":"info","message":"GET /mine 200 - 451ms","service":"auth-service","timestamp":"2026-03-06T10:40:46.605Z"}
+{"level":"info","message":"GET / 304 - 427ms","service":"auth-service","timestamp":"2026-03-06T10:40:46.980Z"}
+{"level":"info","message":"GET /mine 200 - 427ms","service":"auth-service","timestamp":"2026-03-06T10:40:47.035Z"}
+{"level":"info","message":"GET /mine 200 - 459ms","service":"auth-service","timestamp":"2026-03-06T10:40:52.179Z"}
+{"level":"info","message":"GET /mine 200 - 402ms","service":"auth-service","timestamp":"2026-03-06T10:40:52.583Z"}
+{"level":"info","message":"GET /mine 200 - 652ms","service":"auth-service","timestamp":"2026-03-06T10:44:17.671Z"}
+{"level":"info","message":"GET /mine 200 - 413ms","service":"auth-service","timestamp":"2026-03-06T10:44:23.431Z"}
+{"level":"info","message":"GET /mine 200 - 532ms","service":"auth-service","timestamp":"2026-03-06T10:44:34.520Z"}
+{"level":"info","message":"GET / 304 - 416ms","service":"auth-service","timestamp":"2026-03-06T10:45:14.208Z"}
+{"level":"info","message":"GET /mine 200 - 470ms","service":"auth-service","timestamp":"2026-03-06T10:45:14.259Z"}
+{"level":"info","message":"GET / 304 - 366ms","service":"auth-service","timestamp":"2026-03-06T10:45:14.578Z"}
+{"level":"info","message":"GET /mine 200 - 405ms","service":"auth-service","timestamp":"2026-03-06T10:45:14.667Z"}
+{"level":"info","message":"GET /mine 200 - 429ms","service":"auth-service","timestamp":"2026-03-06T10:45:18.279Z"}
+{"level":"info","message":"GET /mine 200 - 466ms","service":"auth-service","timestamp":"2026-03-06T10:45:18.748Z"}
+{"level":"info","message":"GET /status 304 - 367ms","service":"auth-service","timestamp":"2026-03-06T10:45:25.455Z"}
+{"level":"info","message":"GET /status 304 - 406ms","service":"auth-service","timestamp":"2026-03-06T10:45:25.872Z"}
+{"level":"info","message":"GET /mine 200 - 455ms","service":"auth-service","timestamp":"2026-03-06T10:45:27.255Z"}
+{"level":"info","message":"GET /mine 200 - 516ms","service":"auth-service","timestamp":"2026-03-06T10:45:27.775Z"}
+{"level":"info","message":"GET /mine 200 - 422ms","service":"auth-service","timestamp":"2026-03-06T10:45:31.391Z"}
+{"level":"info","message":"GET /mine 200 - 420ms","service":"auth-service","timestamp":"2026-03-06T10:45:31.814Z"}
+{"level":"info","message":"GET /mine 200 - 417ms","service":"auth-service","timestamp":"2026-03-06T10:45:32.657Z"}
+{"level":"info","message":"GET /mine 200 - 452ms","service":"auth-service","timestamp":"2026-03-06T10:45:33.111Z"}
+{"level":"info","message":"POST /upload 200 - 1138ms","service":"auth-service","timestamp":"2026-03-06T10:45:53.797Z"}
+{"level":"info","message":"PATCH /69aaad6263c49691646aeab8 200 - 611ms","service":"auth-service","timestamp":"2026-03-06T10:45:57.261Z"}
+{"level":"info","message":"GET /mine 200 - 617ms","service":"auth-service","timestamp":"2026-03-06T10:45:57.893Z"}
+{"level":"info","message":"POST /upload 200 - 1106ms","service":"auth-service","timestamp":"2026-03-06T10:46:49.038Z"}
+{"level":"info","message":"PATCH /69aaad6263c49691646aeab8 200 - 559ms","service":"auth-service","timestamp":"2026-03-06T10:46:51.874Z"}
+{"level":"info","message":"GET /mine 200 - 404ms","service":"auth-service","timestamp":"2026-03-06T10:46:52.283Z"}
+{"level":"info","message":"POST /upload 200 - 1034ms","service":"auth-service","timestamp":"2026-03-06T10:47:15.299Z"}
+{"level":"info","message":"POST /upload 200 - 1167ms","service":"auth-service","timestamp":"2026-03-06T10:47:28.634Z"}
+{"level":"info","message":"PATCH /69aaad6263c49691646aeab8 200 - 612ms","service":"auth-service","timestamp":"2026-03-06T10:47:31.285Z"}
+{"level":"info","message":"GET /mine 200 - 478ms","service":"auth-service","timestamp":"2026-03-06T10:47:31.768Z"}
+{"level":"info","message":"POST /logout 200 - 673ms","service":"auth-service","timestamp":"2026-03-06T10:47:54.543Z"}
+{"level":"info","message":"POST /signin 200 - 642ms","service":"auth-service","timestamp":"2026-03-06T10:48:02.676Z"}
+{"level":"info","message":"POST /verify-otp 200 - 726ms","service":"auth-service","timestamp":"2026-03-06T10:48:07.023Z"}
+{"level":"info","message":"GET / 200 - 497ms","service":"auth-service","timestamp":"2026-03-06T10:48:07.579Z"}
+{"level":"info","message":"GET /mine 200 - 504ms","service":"auth-service","timestamp":"2026-03-06T10:48:07.586Z"}
+{"level":"info","message":"GET /mine 200 - 378ms","service":"auth-service","timestamp":"2026-03-06T10:48:07.971Z"}
+{"level":"info","message":"GET / 304 - 383ms","service":"auth-service","timestamp":"2026-03-06T10:48:07.975Z"}
+{"level":"info","message":"GET /stats 200 - 925ms","service":"auth-service","timestamp":"2026-03-06T10:48:08.005Z"}
+{"level":"info","message":"GET /stats 304 - 916ms","service":"auth-service","timestamp":"2026-03-06T10:48:08.923Z"}
+{"level":"info","message":"GET / 200 - 477ms","service":"auth-service","timestamp":"2026-03-06T10:48:12.225Z"}
+{"level":"info","message":"GET / 304 - 492ms","service":"auth-service","timestamp":"2026-03-06T10:48:12.721Z"}
+{"level":"info","message":"GET /verifications 304 - 494ms","service":"auth-service","timestamp":"2026-03-06T10:53:00.842Z"}
+{"level":"info","message":"GET /verifications 304 - 393ms","service":"auth-service","timestamp":"2026-03-06T10:53:01.239Z"}
+{"level":"info","message":"GET /verifications 200 - 408ms","service":"auth-service","timestamp":"2026-03-06T10:53:02.415Z"}
+{"level":"info","message":"GET /verifications 200 - 463ms","service":"auth-service","timestamp":"2026-03-06T10:53:03.911Z"}
+{"level":"info","message":"GET /verifications 200 - 381ms","service":"auth-service","timestamp":"2026-03-06T10:53:05.206Z"}
+{"level":"info","message":"GET /users 304 - 327ms","service":"auth-service","timestamp":"2026-03-06T10:53:06.178Z"}
+{"level":"info","message":"GET /verifications 304 - 369ms","service":"auth-service","timestamp":"2026-03-06T10:53:10.781Z"}
+{"level":"info","message":"GET /mine 200 - 395ms","service":"auth-service","timestamp":"2026-03-06T10:53:14.489Z"}
+{"level":"info","message":"GET /mine 200 - 367ms","service":"auth-service","timestamp":"2026-03-06T10:53:14.863Z"}
+{"level":"info","message":"GET /stats 304 - 803ms","service":"auth-service","timestamp":"2026-03-06T10:53:14.896Z"}
+{"level":"info","message":"GET /stats 304 - 741ms","service":"auth-service","timestamp":"2026-03-06T10:53:15.670Z"}
+{"level":"info","message":"GET / 304 - 503ms","service":"auth-service","timestamp":"2026-03-06T10:53:24.629Z"}
+{"level":"info","message":"GET / 304 - 482ms","service":"auth-service","timestamp":"2026-03-06T10:53:25.142Z"}
+{"level":"info","message":"POST /logout 200 - 724ms","service":"auth-service","timestamp":"2026-03-06T11:03:13.579Z"}
+{"level":"info","message":"POST /signin 200 - 783ms","service":"auth-service","timestamp":"2026-03-06T11:03:21.715Z"}
+{"level":"info","message":"POST /verify-otp 200 - 549ms","service":"auth-service","timestamp":"2026-03-06T11:03:26.153Z"}
+{"level":"info","message":"GET / 200 - 348ms","service":"auth-service","timestamp":"2026-03-06T11:03:26.534Z"}
+{"level":"info","message":"GET /mine 200 - 399ms","service":"auth-service","timestamp":"2026-03-06T11:03:26.584Z"}
+{"level":"info","message":"GET / 304 - 347ms","service":"auth-service","timestamp":"2026-03-06T11:03:26.884Z"}
+{"level":"info","message":"GET /mine 200 - 396ms","service":"auth-service","timestamp":"2026-03-06T11:03:26.983Z"}
+{"level":"info","message":"GET /mine 200 - 400ms","service":"auth-service","timestamp":"2026-03-06T11:03:30.413Z"}
+{"level":"info","message":"GET /mine 200 - 394ms","service":"auth-service","timestamp":"2026-03-06T11:03:30.809Z"}
+{"level":"info","message":"PATCH /69a9d3ff79f05abf55b0fb28/status 200 - 491ms","service":"auth-service","timestamp":"2026-03-06T11:03:37.638Z"}
+{"level":"info","message":"GET /mine 200 - 440ms","service":"auth-service","timestamp":"2026-03-06T11:03:38.085Z"}
+{"level":"info","message":"POST /upload 200 - 1061ms","service":"auth-service","timestamp":"2026-03-06T11:04:05.927Z"}
+{"level":"info","message":"POST /upload 200 - 1022ms","service":"auth-service","timestamp":"2026-03-06T11:04:19.329Z"}
+{"level":"info","message":"POST /upload 200 - 637ms","service":"auth-service","timestamp":"2026-03-06T11:04:31.275Z"}
+{"level":"info","message":"POST /upload 200 - 924ms","service":"auth-service","timestamp":"2026-03-06T11:05:40.603Z"}
+{"level":"info","message":"POST /upload 200 - 658ms","service":"auth-service","timestamp":"2026-03-06T11:05:53.777Z"}
+{"level":"info","message":"PATCH /69a9d3ff79f05abf55b0fb28 200 - 520ms","service":"auth-service","timestamp":"2026-03-06T11:05:57.872Z"}
+{"level":"info","message":"GET /mine 200 - 402ms","service":"auth-service","timestamp":"2026-03-06T11:05:58.279Z"}
+{"level":"error","message":"🛑 Gracefully shutting down...","service":"auth-service","timestamp":"2026-03-06T11:06:32.131Z"}

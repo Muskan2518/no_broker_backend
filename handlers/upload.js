@@ -28,7 +28,13 @@ router.post("/upload", upload.single("file"), async (req, res) => {
     // Clean up temp file after upload
     fs.unlinkSync(file.path);
 
-    res.json({ message: "File uploaded successfully", objectName });
+    // Build the full public URL so the frontend can display the image directly
+    // MINIO_ENDPOINT is the S3-style endpoint (e.g. .../storage/v1/s3)
+    // Public Supabase URL pattern: .../storage/v1/object/public/<bucket>/<key>
+    const endpoint = (process.env.MINIO_ENDPOINT || '').replace(/\/s3\/?$/, '');
+    const objectUrl = `${endpoint}/object/public/${bucketName}/${objectName}`;
+
+    res.json({ message: "File uploaded successfully", objectName, objectUrl });
   } catch (err) {
     const logger = require("../config/logger");
     logger.error("Upload error:", err);

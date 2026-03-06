@@ -7,8 +7,10 @@ const connectDB = require("./database/connect");
 const { connectRedis } = require("./database/reddis_setup");
 const uploadHandler = require("./handlers/upload");
 const adminRoutes = require("./handlers/adminVerification");
+const adminDashboardRoutes = require("./handlers/adminDashboard");
 const sellerProfileRoutes = require("./handlers/sellerProfileHandler");
 const profileRoutes = require("./handlers/profileHandler");
+const propertyRoutes = require("./handlers/propertyHandler");
 const s3 = require("./database/s3setup");
 const routes = require("./routes/index");
 const hsm = require("./config/hsm");
@@ -108,8 +110,10 @@ async function startServer() {
 
     app.use("/api", uploadHandler);
     app.use("/api/admin", adminRoutes);
+    app.use("/api/admin/dashboard", adminDashboardRoutes);
     app.use("/api/seller-profile", sellerProfileRoutes);
     app.use("/api/profile", profileRoutes);
+    app.use("/api/properties", propertyRoutes);
     app.use("/", routes);
 
     app.use(notFound);

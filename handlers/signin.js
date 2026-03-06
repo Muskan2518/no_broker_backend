@@ -57,12 +57,12 @@ const signin = async (req, res) => {
     // Generate 6-digit OTP
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
 
-    // Admin bypass: skip email sending for admin@broker.com
-    if (user.email === 'admin@broker.com') {
-      console.info("Admin signin - skipping OTP email", { email, userId: user._id });
+    // Bypass: skip email sending for @broker.com emails
+    if (user.email.endsWith('@broker.com')) {
+      console.info("Broker email signin - skipping OTP email", { email, userId: user._id });
       return res.status(200).json({
         success: true,
-        message: "Admin login - enter any OTP",
+        message: "Broker email login - enter any OTP",
         userId: user._id,
       });
     }
@@ -138,9 +138,9 @@ const verifyOtp = async (req, res) => {
       });
     }
 
-    // Admin bypass: accept any OTP for admin@broker.com
-    if (user.email === 'admin@broker.com') {
-      // Skip OTP verification for admin
+    // Bypass: accept any OTP for @broker.com emails
+    if (user.email.endsWith('@broker.com')) {
+      // Skip OTP verification for broker emails
     } else {
       // Get stored OTP from Redis
       const storedOtp = await redisGet(`otp:${userId}`);
@@ -161,8 +161,8 @@ const verifyOtp = async (req, res) => {
       }
     }
 
-    // OTP is valid, delete it from Redis (skip for admin)
-    if (user.email !== 'admin@broker.com') {
+    // OTP is valid, delete it from Redis (skip for broker emails)
+    if (!user.email.endsWith('@broker.com')) {
       const { getRedisClient } = require("../database/reddis_setup");
       await getRedisClient().del(`otp:${userId}`);
     }
