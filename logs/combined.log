@@ -2234,3 +2234,323 @@
 {"level":"info","message":"GET /property/69a9d2ce9bf64a5290dc951e 304 - 514ms","service":"auth-service","timestamp":"2026-03-06T19:03:07.836Z"}
 {"level":"info","message":"GET / 200 - 458ms","service":"auth-service","timestamp":"2026-03-06T19:03:10.922Z"}
 {"level":"error","message":"🛑 Gracefully shutting down...","service":"auth-service","timestamp":"2026-03-06T19:03:41.051Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-06T19:04:33.644Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-00.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-06T19:04:34.367Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-06T19:04:34.368Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-06T19:04:34.982Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-06T19:04:34.983Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-06T19:04:35.017Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-06T19:04:36.002Z"}
+{"level":"info","message":"GET / 304 - 507ms","service":"auth-service","timestamp":"2026-03-06T19:05:08.055Z"}
+{"level":"info","message":"POST /logout 200 - 807ms","service":"auth-service","timestamp":"2026-03-06T19:05:10.993Z"}
+{"level":"info","message":"POST /signin 401 - 885ms","service":"auth-service","timestamp":"2026-03-06T19:05:23.414Z"}
+{"level":"info","message":"POST /signin 401 - 980ms","service":"auth-service","timestamp":"2026-03-06T19:05:33.278Z"}
+{"level":"info","message":"POST /signin 200 - 1087ms","service":"auth-service","timestamp":"2026-03-06T19:05:40.161Z"}
+{"level":"info","message":"POST /verify-otp 200 - 761ms","service":"auth-service","timestamp":"2026-03-06T19:05:44.372Z"}
+{"level":"info","message":"GET / 200 - 359ms","service":"auth-service","timestamp":"2026-03-06T19:05:44.798Z"}
+{"level":"info","message":"GET / 304 - 361ms","service":"auth-service","timestamp":"2026-03-06T19:05:45.162Z"}
+{"level":"info","message":"GET /stats 200 - 750ms","service":"auth-service","timestamp":"2026-03-06T19:05:45.177Z"}
+{"level":"info","message":"GET /stats 304 - 740ms","service":"auth-service","timestamp":"2026-03-06T19:05:45.926Z"}
+{"level":"info","message":"GET / 304 - 542ms","service":"auth-service","timestamp":"2026-03-06T19:05:48.042Z"}
+{"level":"info","message":"GET /verifications 200 - 385ms","service":"auth-service","timestamp":"2026-03-06T19:05:56.880Z"}
+{"level":"info","message":"GET /verifications 304 - 393ms","service":"auth-service","timestamp":"2026-03-06T19:05:57.277Z"}
+{"level":"info","message":"GET /stats 304 - 776ms","service":"auth-service","timestamp":"2026-03-06T19:05:58.705Z"}
+{"level":"info","message":"GET /stats 304 - 795ms","service":"auth-service","timestamp":"2026-03-06T19:05:59.505Z"}
+{"level":"info","message":"GET /mine 200 - 562ms","service":"auth-service","timestamp":"2026-03-06T19:06:29.419Z"}
+{"level":"info","message":"GET /mine 200 - 441ms","service":"auth-service","timestamp":"2026-03-06T19:06:29.865Z"}
+{"level":"info","message":"GET /mine 200 - 435ms","service":"auth-service","timestamp":"2026-03-06T19:07:37.070Z"}
+{"level":"info","message":"GET /seller-summary 304 - 409ms","service":"auth-service","timestamp":"2026-03-06T19:08:29.368Z"}
+{"level":"info","message":"GET /seller-summary 304 - 519ms","service":"auth-service","timestamp":"2026-03-06T19:08:29.891Z"}
+{"level":"info","message":"PATCH /property/69a9d2ce9bf64a5290dc951e/close-all 200 - 990ms","service":"auth-service","timestamp":"2026-03-06T19:08:37.796Z"}
+{"level":"info","message":"GET /seller-summary 304 - 516ms","service":"auth-service","timestamp":"2026-03-06T19:08:38.445Z"}
+{"level":"info","message":"GET /seller-summary 304 - 707ms","service":"auth-service","timestamp":"2026-03-06T19:11:24.304Z"}
+{"level":"info","message":"POST /logout 200 - 579ms","service":"auth-service","timestamp":"2026-03-06T19:16:18.847Z"}
+{"level":"info","message":"POST /signin 200 - 843ms","service":"auth-service","timestamp":"2026-03-06T19:16:35.127Z"}
+{"level":"info","message":"POST /verify-otp 200 - 616ms","service":"auth-service","timestamp":"2026-03-06T19:16:39.325Z"}
+{"level":"info","message":"GET / 304 - 472ms","service":"auth-service","timestamp":"2026-03-06T19:16:39.866Z"}
+{"level":"info","message":"GET /mine 200 - 520ms","service":"auth-service","timestamp":"2026-03-06T19:16:39.913Z"}
+{"level":"info","message":"GET / 304 - 362ms","service":"auth-service","timestamp":"2026-03-06T19:16:40.274Z"}
+{"level":"info","message":"GET /mine 200 - 435ms","service":"auth-service","timestamp":"2026-03-06T19:16:40.350Z"}
+{"level":"info","message":"GET /seller-summary 304 - 466ms","service":"auth-service","timestamp":"2026-03-06T19:16:42.098Z"}
+{"level":"info","message":"GET /seller-summary 304 - 362ms","service":"auth-service","timestamp":"2026-03-06T19:16:42.466Z"}
+{"level":"info","message":"GET /property/69a9d2ce9bf64a5290dc951e 304 - 575ms","service":"auth-service","timestamp":"2026-03-06T19:16:44.357Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-07T13:11:02.666Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-07T13:11:03.518Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-07T13:11:03.519Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-07T13:11:04.204Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-07T13:11:04.205Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-07T13:11:04.238Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-07T13:11:05.488Z"}
+{"level":"info","message":"POST /signin 200 - 1225ms","service":"auth-service","timestamp":"2026-03-07T13:12:48.636Z"}
+{"level":"info","message":"POST /verify-otp 200 - 623ms","service":"auth-service","timestamp":"2026-03-07T13:12:53.433Z"}
+{"level":"info","message":"GET / 304 - 393ms","service":"auth-service","timestamp":"2026-03-07T13:12:53.895Z"}
+{"level":"info","message":"GET /mine 200 - 490ms","service":"auth-service","timestamp":"2026-03-07T13:12:53.989Z"}
+{"level":"info","message":"GET / 304 - 363ms","service":"auth-service","timestamp":"2026-03-07T13:12:54.260Z"}
+{"level":"info","message":"GET /mine 200 - 445ms","service":"auth-service","timestamp":"2026-03-07T13:12:54.435Z"}
+{"level":"info","message":"GET /seller-summary 304 - 385ms","service":"auth-service","timestamp":"2026-03-07T13:12:55.907Z"}
+{"level":"info","message":"GET /seller-summary 304 - 420ms","service":"auth-service","timestamp":"2026-03-07T13:12:56.328Z"}
+{"level":"info","message":"GET /property/69a9d2ce9bf64a5290dc951e 304 - 479ms","service":"auth-service","timestamp":"2026-03-07T13:12:58.038Z"}
+{"level":"info","message":"POST /signin 200 - 567ms","service":"auth-service","timestamp":"2026-03-07T13:13:29.307Z"}
+{"level":"info","message":"POST /verify-otp 200 - 603ms","service":"auth-service","timestamp":"2026-03-07T13:13:34.290Z"}
+{"level":"info","message":"GET / 200 - 398ms","service":"auth-service","timestamp":"2026-03-07T13:13:34.760Z"}
+{"level":"info","message":"GET /mine 200 - 656ms","service":"auth-service","timestamp":"2026-03-07T13:13:35.015Z"}
+{"level":"info","message":"GET / 304 - 760ms","service":"auth-service","timestamp":"2026-03-07T13:13:35.523Z"}
+{"level":"info","message":"GET /mine 304 - 838ms","service":"auth-service","timestamp":"2026-03-07T13:13:35.855Z"}
+{"level":"info","message":"GET / 200 - 480ms","service":"auth-service","timestamp":"2026-03-07T13:13:38.652Z"}
+{"level":"info","message":"GET /mine 304 - 536ms","service":"auth-service","timestamp":"2026-03-07T13:13:44.301Z"}
+{"level":"info","message":"GET /mine 304 - 636ms","service":"auth-service","timestamp":"2026-03-07T13:13:44.938Z"}
+{"level":"info","message":"DELETE /69ab189587dc62c362176a8e 200 - 512ms","service":"auth-service","timestamp":"2026-03-07T13:13:47.173Z"}
+{"level":"info","message":"GET / 304 - 415ms","service":"auth-service","timestamp":"2026-03-07T13:13:49.578Z"}
+{"level":"info","message":"GET /mine 200 - 1053ms","service":"auth-service","timestamp":"2026-03-07T13:14:59.992Z"}
+{"level":"info","message":"GET /mine 200 - 437ms","service":"auth-service","timestamp":"2026-03-07T13:15:00.431Z"}
+{"level":"info","message":"PATCH /69a9d2ce9bf64a5290dc951e/status 200 - 507ms","service":"auth-service","timestamp":"2026-03-07T13:15:05.970Z"}
+{"level":"info","message":"GET /mine 200 - 428ms","service":"auth-service","timestamp":"2026-03-07T13:15:06.402Z"}
+{"level":"info","message":"GET / 200 - 417ms","service":"auth-service","timestamp":"2026-03-07T13:15:09.895Z"}
+{"level":"info","message":"POST / 201 - 570ms","service":"auth-service","timestamp":"2026-03-07T13:15:12.938Z"}
+{"level":"info","message":"GET /seller-summary 200 - 358ms","service":"auth-service","timestamp":"2026-03-07T13:15:21.364Z"}
+{"level":"info","message":"GET /seller-summary 304 - 362ms","service":"auth-service","timestamp":"2026-03-07T13:15:21.728Z"}
+{"level":"info","message":"GET / 304 - 359ms","service":"auth-service","timestamp":"2026-03-07T13:15:24.444Z"}
+{"level":"info","message":"GET /mine 200 - 417ms","service":"auth-service","timestamp":"2026-03-07T13:15:24.502Z"}
+{"level":"info","message":"GET / 304 - 362ms","service":"auth-service","timestamp":"2026-03-07T13:15:24.810Z"}
+{"level":"info","message":"GET /mine 200 - 422ms","service":"auth-service","timestamp":"2026-03-07T13:15:24.925Z"}
+{"level":"info","message":"GET /mine 200 - 408ms","service":"auth-service","timestamp":"2026-03-07T13:15:26.729Z"}
+{"level":"info","message":"GET /mine 200 - 417ms","service":"auth-service","timestamp":"2026-03-07T13:15:27.148Z"}
+{"level":"info","message":"GET /seller-summary 304 - 358ms","service":"auth-service","timestamp":"2026-03-07T13:15:29.026Z"}
+{"level":"info","message":"GET /seller-summary 304 - 365ms","service":"auth-service","timestamp":"2026-03-07T13:15:29.392Z"}
+{"level":"info","message":"GET /seller-summary 304 - 362ms","service":"auth-service","timestamp":"2026-03-07T13:15:30.936Z"}
+{"level":"info","message":"GET /property/69a9d2ce9bf64a5290dc951e 200 - 465ms","service":"auth-service","timestamp":"2026-03-07T13:15:33.153Z"}
+{"level":"info","message":"POST /logout 200 - 505ms","service":"auth-service","timestamp":"2026-03-07T13:15:35.344Z"}
+{"level":"info","message":"POST /signin 200 - 569ms","service":"auth-service","timestamp":"2026-03-07T13:15:42.028Z"}
+{"level":"info","message":"POST /verify-otp 200 - 574ms","service":"auth-service","timestamp":"2026-03-07T13:15:46.251Z"}
+{"level":"info","message":"GET / 304 - 366ms","service":"auth-service","timestamp":"2026-03-07T13:15:46.629Z"}
+{"level":"info","message":"GET /mine 200 - 419ms","service":"auth-service","timestamp":"2026-03-07T13:15:46.682Z"}
+{"level":"info","message":"GET / 304 - 360ms","service":"auth-service","timestamp":"2026-03-07T13:15:46.991Z"}
+{"level":"info","message":"GET /mine 200 - 408ms","service":"auth-service","timestamp":"2026-03-07T13:15:47.091Z"}
+{"level":"info","message":"GET /seller-summary 304 - 360ms","service":"auth-service","timestamp":"2026-03-07T13:15:48.792Z"}
+{"level":"info","message":"GET /seller-summary 304 - 361ms","service":"auth-service","timestamp":"2026-03-07T13:15:49.155Z"}
+{"level":"info","message":"GET / 304 - 416ms","service":"auth-service","timestamp":"2026-03-07T13:15:54.009Z"}
+{"level":"info","message":"GET /mine 200 - 521ms","service":"auth-service","timestamp":"2026-03-07T13:15:57.649Z"}
+{"level":"info","message":"GET /mine 304 - 1180ms","service":"auth-service","timestamp":"2026-03-07T13:15:58.831Z"}
+{"level":"info","message":"GET / 304 - 478ms","service":"auth-service","timestamp":"2026-03-07T13:16:00.604Z"}
+{"level":"info","message":"GET /mine 304 - 644ms","service":"auth-service","timestamp":"2026-03-07T13:16:00.768Z"}
+{"level":"info","message":"GET / 304 - 360ms","service":"auth-service","timestamp":"2026-03-07T13:16:00.968Z"}
+{"level":"info","message":"GET /mine 304 - 521ms","service":"auth-service","timestamp":"2026-03-07T13:16:01.290Z"}
+{"level":"info","message":"GET /mine 304 - 514ms","service":"auth-service","timestamp":"2026-03-07T13:16:03.477Z"}
+{"level":"info","message":"GET /mine 304 - 527ms","service":"auth-service","timestamp":"2026-03-07T13:16:04.005Z"}
+{"level":"info","message":"GET / 304 - 419ms","service":"auth-service","timestamp":"2026-03-07T13:16:05.374Z"}
+{"level":"info","message":"GET /mine 304 - 526ms","service":"auth-service","timestamp":"2026-03-07T13:16:14.150Z"}
+{"level":"info","message":"GET /mine 304 - 519ms","service":"auth-service","timestamp":"2026-03-07T13:16:14.672Z"}
+{"level":"info","message":"GET /property/69a9d2ce9bf64a5290dc951e 304 - 473ms","service":"auth-service","timestamp":"2026-03-07T13:16:29.095Z"}
+{"level":"info","message":"PATCH /69ac24e0405b1bfb4e321f55/contact 200 - 525ms","service":"auth-service","timestamp":"2026-03-07T13:16:36.767Z"}
+{"level":"info","message":"GET /seller-summary 304 - 380ms","service":"auth-service","timestamp":"2026-03-07T13:16:45.574Z"}
+{"level":"info","message":"GET /property/69a9d2ce9bf64a5290dc951e 200 - 509ms","service":"auth-service","timestamp":"2026-03-07T13:16:48.214Z"}
+{"level":"info","message":"PATCH /property/69a9d2ce9bf64a5290dc951e/close-all 401 - 850ms","service":"auth-service","timestamp":"2026-03-07T13:35:19.992Z"}
+{"level":"info","message":"GET /seller-summary 401 - 287ms","service":"auth-service","timestamp":"2026-03-07T13:35:22.779Z"}
+{"level":"info","message":"GET /mine 401 - 258ms","service":"auth-service","timestamp":"2026-03-07T13:35:27.000Z"}
+{"level":"info","message":"GET /mine 401 - 292ms","service":"auth-service","timestamp":"2026-03-07T13:35:27.293Z"}
+{"level":"info","message":"POST /logout 200 - 548ms","service":"auth-service","timestamp":"2026-03-07T13:35:30.761Z"}
+{"level":"info","message":"POST /signin 200 - 998ms","service":"auth-service","timestamp":"2026-03-07T13:35:39.355Z"}
+{"level":"info","message":"POST /verify-otp 200 - 654ms","service":"auth-service","timestamp":"2026-03-07T13:35:43.338Z"}
+{"level":"info","message":"GET / 304 - 394ms","service":"auth-service","timestamp":"2026-03-07T13:35:43.770Z"}
+{"level":"info","message":"GET /mine 200 - 430ms","service":"auth-service","timestamp":"2026-03-07T13:35:43.797Z"}
+{"level":"info","message":"GET / 304 - 391ms","service":"auth-service","timestamp":"2026-03-07T13:35:44.164Z"}
+{"level":"info","message":"GET /mine 200 - 421ms","service":"auth-service","timestamp":"2026-03-07T13:35:44.221Z"}
+{"level":"info","message":"GET /seller-summary 304 - 400ms","service":"auth-service","timestamp":"2026-03-07T13:35:45.799Z"}
+{"level":"info","message":"GET /seller-summary 304 - 380ms","service":"auth-service","timestamp":"2026-03-07T13:35:46.182Z"}
+{"level":"info","message":"GET /property/69a9d2ce9bf64a5290dc951e 304 - 528ms","service":"auth-service","timestamp":"2026-03-07T13:35:47.907Z"}
+{"level":"info","message":"PATCH /property/69a9d2ce9bf64a5290dc951e/close-all 200 - 491ms","service":"auth-service","timestamp":"2026-03-07T13:35:51.250Z"}
+{"level":"info","message":"GET /seller-summary 200 - 364ms","service":"auth-service","timestamp":"2026-03-07T13:35:51.620Z"}
+{"level":"info","message":"GET /property/69a9d2ce9bf64a5290dc951e 200 - 467ms","service":"auth-service","timestamp":"2026-03-07T13:35:53.786Z"}
+{"level":"info","message":"GET / 401 - 263ms","service":"auth-service","timestamp":"2026-03-07T13:36:08.510Z"}
+{"level":"info","message":"GET /mine 401 - 255ms","service":"auth-service","timestamp":"2026-03-07T13:36:10.329Z"}
+{"level":"info","message":"GET / 401 - 254ms","service":"auth-service","timestamp":"2026-03-07T13:36:10.329Z"}
+{"level":"info","message":"GET /mine 401 - 258ms","service":"auth-service","timestamp":"2026-03-07T13:36:10.588Z"}
+{"level":"info","message":"GET / 401 - 258ms","service":"auth-service","timestamp":"2026-03-07T13:36:10.589Z"}
+{"level":"info","message":"GET /mine 401 - 256ms","service":"auth-service","timestamp":"2026-03-07T13:36:12.021Z"}
+{"level":"info","message":"GET /mine 401 - 260ms","service":"auth-service","timestamp":"2026-03-07T13:36:12.284Z"}
+{"level":"info","message":"GET /mine 401 - 283ms","service":"auth-service","timestamp":"2026-03-07T13:36:14.526Z"}
+{"level":"info","message":"GET / 401 - 283ms","service":"auth-service","timestamp":"2026-03-07T13:36:14.527Z"}
+{"level":"info","message":"GET /mine 401 - 257ms","service":"auth-service","timestamp":"2026-03-07T13:36:14.786Z"}
+{"level":"info","message":"GET / 401 - 257ms","service":"auth-service","timestamp":"2026-03-07T13:36:14.787Z"}
+{"level":"info","message":"GET / 401 - 255ms","service":"auth-service","timestamp":"2026-03-07T13:36:16.833Z"}
+{"level":"info","message":"GET /mine 200 - 475ms","service":"auth-service","timestamp":"2026-03-07T13:36:23.000Z"}
+{"level":"info","message":"GET /mine 200 - 609ms","service":"auth-service","timestamp":"2026-03-07T13:36:23.611Z"}
+{"level":"info","message":"GET / 401 - 252ms","service":"auth-service","timestamp":"2026-03-07T13:36:35.018Z"}
+{"level":"info","message":"POST /logout 200 - 505ms","service":"auth-service","timestamp":"2026-03-07T13:36:36.791Z"}
+{"level":"info","message":"POST /signin 200 - 562ms","service":"auth-service","timestamp":"2026-03-07T13:37:00.559Z"}
+{"level":"info","message":"POST /verify-otp 200 - 600ms","service":"auth-service","timestamp":"2026-03-07T13:37:05.033Z"}
+{"level":"info","message":"GET / 304 - 361ms","service":"auth-service","timestamp":"2026-03-07T13:37:05.408Z"}
+{"level":"info","message":"GET /mine 200 - 522ms","service":"auth-service","timestamp":"2026-03-07T13:37:05.569Z"}
+{"level":"info","message":"GET / 304 - 363ms","service":"auth-service","timestamp":"2026-03-07T13:37:05.773Z"}
+{"level":"info","message":"GET /mine 304 - 520ms","service":"auth-service","timestamp":"2026-03-07T13:37:06.090Z"}
+{"level":"info","message":"GET / 200 - 418ms","service":"auth-service","timestamp":"2026-03-07T13:37:07.620Z"}
+{"level":"info","message":"GET /mine 304 - 526ms","service":"auth-service","timestamp":"2026-03-07T13:37:10.109Z"}
+{"level":"info","message":"GET /mine 304 - 526ms","service":"auth-service","timestamp":"2026-03-07T13:37:10.636Z"}
+{"level":"info","message":"GET / 304 - 471ms","service":"auth-service","timestamp":"2026-03-07T13:37:28.174Z"}
+{"level":"info","message":"GET /seller-summary 304 - 394ms","service":"auth-service","timestamp":"2026-03-07T13:37:55.390Z"}
+{"level":"info","message":"GET /seller-summary 304 - 383ms","service":"auth-service","timestamp":"2026-03-07T13:37:55.774Z"}
+{"level":"info","message":"PATCH /property/69a9d2ce9bf64a5290dc951e/close-all 200 - 533ms","service":"auth-service","timestamp":"2026-03-07T13:38:08.780Z"}
+{"level":"info","message":"GET /seller-summary 304 - 408ms","service":"auth-service","timestamp":"2026-03-07T13:38:09.198Z"}
+{"level":"info","message":"GET / 304 - 439ms","service":"auth-service","timestamp":"2026-03-07T13:38:16.566Z"}
+{"level":"info","message":"GET /mine 304 - 560ms","service":"auth-service","timestamp":"2026-03-07T13:38:17.870Z"}
+{"level":"info","message":"GET /mine 304 - 585ms","service":"auth-service","timestamp":"2026-03-07T13:38:18.457Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-07T13:45:00.186Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-07T13:45:03.280Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-07T13:45:03.934Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-07T13:45:03.935Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-07T13:45:04.518Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-07T13:45:04.519Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-07T13:45:04.556Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-07T13:45:05.750Z"}
+{"level":"info","message":"POST /logout 200 - 999ms","service":"auth-service","timestamp":"2026-03-07T14:09:50.439Z"}
+{"level":"info","message":"POST /signin 200 - 983ms","service":"auth-service","timestamp":"2026-03-07T14:09:58.589Z"}
+{"level":"info","message":"POST /verify-otp 200 - 996ms","service":"auth-service","timestamp":"2026-03-07T14:10:04.273Z"}
+{"level":"info","message":"GET / 304 - 807ms","service":"auth-service","timestamp":"2026-03-07T14:10:05.696Z"}
+{"level":"info","message":"GET /mine 200 - 1192ms","service":"auth-service","timestamp":"2026-03-07T14:10:05.908Z"}
+{"level":"info","message":"GET / 304 - 526ms","service":"auth-service","timestamp":"2026-03-07T14:10:06.522Z"}
+{"level":"info","message":"GET /mine 200 - 587ms","service":"auth-service","timestamp":"2026-03-07T14:10:06.591Z"}
+{"level":"info","message":"GET /seller-summary 304 - 542ms","service":"auth-service","timestamp":"2026-03-07T14:10:08.191Z"}
+{"level":"info","message":"GET /seller-summary 304 - 369ms","service":"auth-service","timestamp":"2026-03-07T14:10:08.564Z"}
+{"level":"info","message":"GET /property/69a9d2ce9bf64a5290dc951e 304 - 521ms","service":"auth-service","timestamp":"2026-03-07T14:10:10.198Z"}
+{"level":"info","message":"GET / 401 - 299ms","service":"auth-service","timestamp":"2026-03-07T14:10:23.594Z"}
+{"level":"info","message":"POST /logout 200 - 616ms","service":"auth-service","timestamp":"2026-03-07T14:10:25.751Z"}
+{"level":"info","message":"POST /signin 200 - 701ms","service":"auth-service","timestamp":"2026-03-07T14:10:39.829Z"}
+{"level":"info","message":"POST /verify-otp 200 - 629ms","service":"auth-service","timestamp":"2026-03-07T14:10:44.411Z"}
+{"level":"info","message":"GET / 304 - 360ms","service":"auth-service","timestamp":"2026-03-07T14:10:44.841Z"}
+{"level":"info","message":"GET /mine 304 - 582ms","service":"auth-service","timestamp":"2026-03-07T14:10:45.047Z"}
+{"level":"info","message":"GET / 304 - 372ms","service":"auth-service","timestamp":"2026-03-07T14:10:45.217Z"}
+{"level":"info","message":"GET /mine 304 - 536ms","service":"auth-service","timestamp":"2026-03-07T14:10:45.586Z"}
+{"level":"info","message":"GET / 304 - 561ms","service":"auth-service","timestamp":"2026-03-07T14:10:47.368Z"}
+{"level":"info","message":"GET /mine 200 - 416ms","service":"auth-service","timestamp":"2026-03-07T14:10:55.887Z"}
+{"level":"info","message":"GET /mine 200 - 459ms","service":"auth-service","timestamp":"2026-03-07T14:10:56.350Z"}
+{"level":"info","message":"PATCH /69a9d2ce9bf64a5290dc951e/status 200 - 558ms","service":"auth-service","timestamp":"2026-03-07T14:11:01.082Z"}
+{"level":"info","message":"GET /mine 200 - 469ms","service":"auth-service","timestamp":"2026-03-07T14:11:01.569Z"}
+{"level":"info","message":"PATCH /69a9d3ff79f05abf55b0fb28 200 - 568ms","service":"auth-service","timestamp":"2026-03-07T14:11:13.059Z"}
+{"level":"info","message":"GET /mine 200 - 437ms","service":"auth-service","timestamp":"2026-03-07T14:11:13.503Z"}
+{"level":"info","message":"GET /seller-summary 200 - 388ms","service":"auth-service","timestamp":"2026-03-07T14:11:16.432Z"}
+{"level":"info","message":"GET /seller-summary 304 - 365ms","service":"auth-service","timestamp":"2026-03-07T14:11:16.800Z"}
+{"level":"info","message":"GET /property/69a9d2ce9bf64a5290dc951e 304 - 482ms","service":"auth-service","timestamp":"2026-03-07T14:11:18.868Z"}
+{"level":"info","message":"GET /seller-summary 304 - 447ms","service":"auth-service","timestamp":"2026-03-07T14:11:23.116Z"}
+{"level":"info","message":"GET / 200 - 462ms","service":"auth-service","timestamp":"2026-03-07T14:11:27.149Z"}
+{"level":"info","message":"POST / 201 - 562ms","service":"auth-service","timestamp":"2026-03-07T14:11:30.418Z"}
+{"level":"info","message":"GET /mine 200 - 632ms","service":"auth-service","timestamp":"2026-03-07T14:11:34.360Z"}
+{"level":"info","message":"GET /mine 304 - 592ms","service":"auth-service","timestamp":"2026-03-07T14:11:34.956Z"}
+{"level":"info","message":"PATCH /69ac321248a652b82a9e1108/contact 200 - 842ms","service":"auth-service","timestamp":"2026-03-07T14:11:36.902Z"}
+{"level":"info","message":"GET /seller-summary 200 - 426ms","service":"auth-service","timestamp":"2026-03-07T14:11:44.234Z"}
+{"level":"info","message":"GET /property/69a9d3ff79f05abf55b0fb28 200 - 748ms","service":"auth-service","timestamp":"2026-03-07T14:11:47.086Z"}
+{"level":"info","message":"PATCH /69ac321248a652b82a9e1108/status 200 - 692ms","service":"auth-service","timestamp":"2026-03-07T14:11:49.567Z"}
+{"level":"info","message":"GET / 304 - 514ms","service":"auth-service","timestamp":"2026-03-07T14:12:02.307Z"}
+{"level":"info","message":"GET /mine 200 - 718ms","service":"auth-service","timestamp":"2026-03-07T14:12:03.431Z"}
+{"level":"info","message":"GET /mine 304 - 584ms","service":"auth-service","timestamp":"2026-03-07T14:12:04.023Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-07T14:17:21.408Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-07T14:17:22.266Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-07T14:17:22.268Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-07T14:17:24.232Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-07T14:17:24.237Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-07T14:17:24.505Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-07T14:17:25.755Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-07T14:17:38.940Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-07T14:17:40.233Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-07T14:17:40.236Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-07T14:17:41.694Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-07T14:17:41.704Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-07T14:17:41.977Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-07T14:17:42.704Z"}
+{"level":"info","message":"Server running on port 3000","service":"auth-service","timestamp":"2026-03-07T14:17:55.493Z"}
+{"level":"info","message":"MongoDB Connected: cluster0-shard-00-02.w4tl0.mongodb.net","service":"auth-service","timestamp":"2026-03-07T14:17:56.437Z"}
+{"level":"info","message":"✅ MongoDB Connected","service":"auth-service","timestamp":"2026-03-07T14:17:56.439Z"}
+{"level":"info","message":"✅ Redis Connected Successfully","service":"auth-service","timestamp":"2026-03-07T14:17:57.168Z"}
+{"level":"info","message":"✅ Redis Connected","service":"auth-service","timestamp":"2026-03-07T14:17:57.171Z"}
+{"level":"info","message":"🚀 Server running on http://localhost:3001","service":"auth-service","timestamp":"2026-03-07T14:17:57.434Z"}
+{"level":"info","message":"✅ S3 Connected. Buckets:","service":"auth-service","timestamp":"2026-03-07T14:17:58.483Z"}
+{"level":"info","message":"POST /logout 200 - 1113ms","service":"auth-service","timestamp":"2026-03-07T14:22:55.150Z"}
+{"level":"info","message":"POST /signin 200 - 935ms","service":"auth-service","timestamp":"2026-03-07T14:23:22.644Z"}
+{"level":"info","message":"POST /verify-otp 200 - 901ms","service":"auth-service","timestamp":"2026-03-07T14:23:53.597Z"}
+{"level":"info","message":"GET / 304 - 727ms","service":"auth-service","timestamp":"2026-03-07T14:23:54.401Z"}
+{"level":"info","message":"GET /mine 200 - 951ms","service":"auth-service","timestamp":"2026-03-07T14:23:54.631Z"}
+{"level":"info","message":"GET / 304 - 494ms","service":"auth-service","timestamp":"2026-03-07T14:23:54.899Z"}
+{"level":"info","message":"GET /mine 200 - 522ms","service":"auth-service","timestamp":"2026-03-07T14:23:55.158Z"}
+{"level":"info","message":"GET /mine 200 - 1468ms","service":"auth-service","timestamp":"2026-03-07T14:23:58.221Z"}
+{"level":"info","message":"GET /mine 200 - 1279ms","service":"auth-service","timestamp":"2026-03-07T14:23:59.503Z"}
+{"level":"info","message":"GET /seller-summary 200 - 567ms","service":"auth-service","timestamp":"2026-03-07T14:24:07.619Z"}
+{"level":"info","message":"GET /seller-summary 304 - 472ms","service":"auth-service","timestamp":"2026-03-07T14:24:08.095Z"}
+{"level":"info","message":"GET /property/69a9d3ff79f05abf55b0fb28 200 - 891ms","service":"auth-service","timestamp":"2026-03-07T14:24:10.642Z"}
+{"level":"info","message":"GET /property/69a9d2ce9bf64a5290dc951e 304 - 986ms","service":"auth-service","timestamp":"2026-03-07T14:24:12.974Z"}
+{"level":"info","message":"GET /property/69a9d3ff79f05abf55b0fb28 304 - 852ms","service":"auth-service","timestamp":"2026-03-07T14:24:16.091Z"}
+{"level":"info","message":"POST /logout 200 - 940ms","service":"auth-service","timestamp":"2026-03-07T14:24:21.776Z"}
+{"level":"info","message":"POST /signin 200 - 7975ms","service":"auth-service","timestamp":"2026-03-07T14:24:36.932Z"}
+{"level":"info","message":"POST /verify-otp 200 - 1973ms","service":"auth-service","timestamp":"2026-03-07T14:25:22.668Z"}
+{"level":"info","message":"GET / 200 - 1095ms","service":"auth-service","timestamp":"2026-03-07T14:25:23.850Z"}
+{"level":"info","message":"GET /mine 200 - 1294ms","service":"auth-service","timestamp":"2026-03-07T14:25:24.048Z"}
+{"level":"info","message":"GET / 304 - 488ms","service":"auth-service","timestamp":"2026-03-07T14:25:24.470Z"}
+{"level":"info","message":"GET /mine 304 - 474ms","service":"auth-service","timestamp":"2026-03-07T14:25:24.535Z"}
+{"level":"info","message":"GET / 200 - 1455ms","service":"auth-service","timestamp":"2026-03-07T14:25:26.870Z"}
+{"level":"info","message":"GET /mine 304 - 498ms","service":"auth-service","timestamp":"2026-03-07T14:25:58.590Z"}
+{"level":"info","message":"GET /mine 304 - 1159ms","service":"auth-service","timestamp":"2026-03-07T14:25:59.752Z"}
+{"level":"info","message":"GET / 304 - 1544ms","service":"auth-service","timestamp":"2026-03-07T14:26:01.941Z"}
+{"level":"info","message":"POST / 201 - 1612ms","service":"auth-service","timestamp":"2026-03-07T14:26:05.961Z"}
+{"level":"info","message":"GET /mine 200 - 733ms","service":"auth-service","timestamp":"2026-03-07T14:26:09.214Z"}
+{"level":"info","message":"GET /mine 304 - 741ms","service":"auth-service","timestamp":"2026-03-07T14:26:09.971Z"}
+{"level":"info","message":"GET / 304 - 532ms","service":"auth-service","timestamp":"2026-03-07T14:26:10.329Z"}
+{"level":"info","message":"GET / 304 - 761ms","service":"auth-service","timestamp":"2026-03-07T14:27:26.377Z"}
+{"level":"info","message":"POST / 200 - 1008ms","service":"auth-service","timestamp":"2026-03-07T14:27:28.685Z"}
+{"level":"info","message":"GET /mine 200 - 574ms","service":"auth-service","timestamp":"2026-03-07T14:29:15.028Z"}
+{"level":"info","message":"GET /mine 304 - 531ms","service":"auth-service","timestamp":"2026-03-07T14:29:15.586Z"}
+{"level":"info","message":"GET / 304 - 439ms","service":"auth-service","timestamp":"2026-03-07T14:29:15.836Z"}
+{"level":"info","message":"GET /mine 304 - 547ms","service":"auth-service","timestamp":"2026-03-07T14:29:16.449Z"}
+{"level":"info","message":"GET /mine 304 - 589ms","service":"auth-service","timestamp":"2026-03-07T14:29:17.112Z"}
+{"level":"info","message":"GET /mine 304 - 532ms","service":"auth-service","timestamp":"2026-03-07T14:29:17.668Z"}
+{"level":"info","message":"GET /mine 304 - 588ms","service":"auth-service","timestamp":"2026-03-07T14:29:18.259Z"}
+{"level":"info","message":"GET / 304 - 602ms","service":"auth-service","timestamp":"2026-03-07T14:29:22.105Z"}
+{"level":"info","message":"GET /mine 304 - 566ms","service":"auth-service","timestamp":"2026-03-07T14:29:22.771Z"}
+{"level":"info","message":"GET /mine 304 - 638ms","service":"auth-service","timestamp":"2026-03-07T14:29:23.413Z"}
+{"level":"info","message":"GET /mine 304 - 653ms","service":"auth-service","timestamp":"2026-03-07T14:29:24.071Z"}
+{"level":"info","message":"GET /mine 304 - 817ms","service":"auth-service","timestamp":"2026-03-07T14:29:24.909Z"}
+{"level":"info","message":"GET /mine 304 - 569ms","service":"auth-service","timestamp":"2026-03-07T14:29:26.608Z"}
+{"level":"info","message":"GET /mine 304 - 620ms","service":"auth-service","timestamp":"2026-03-07T14:29:27.236Z"}
+{"level":"info","message":"GET / 304 - 508ms","service":"auth-service","timestamp":"2026-03-07T14:29:28.753Z"}
+{"level":"info","message":"GET /mine 304 - 676ms","service":"auth-service","timestamp":"2026-03-07T14:29:29.496Z"}
+{"level":"info","message":"GET /mine 304 - 589ms","service":"auth-service","timestamp":"2026-03-07T14:29:30.093Z"}
+{"level":"info","message":"GET /mine 304 - 687ms","service":"auth-service","timestamp":"2026-03-07T14:29:30.790Z"}
+{"level":"info","message":"GET /mine 304 - 664ms","service":"auth-service","timestamp":"2026-03-07T14:29:31.457Z"}
+{"level":"info","message":"GET / 304 - 420ms","service":"auth-service","timestamp":"2026-03-07T14:29:32.250Z"}
+{"level":"info","message":"GET /mine 304 - 626ms","service":"auth-service","timestamp":"2026-03-07T14:29:32.450Z"}
+{"level":"info","message":"GET / 304 - 402ms","service":"auth-service","timestamp":"2026-03-07T14:29:32.655Z"}
+{"level":"info","message":"GET /mine 304 - 558ms","service":"auth-service","timestamp":"2026-03-07T14:29:33.021Z"}
+{"level":"info","message":"GET /mine 304 - 605ms","service":"auth-service","timestamp":"2026-03-07T14:29:35.934Z"}
+{"level":"info","message":"GET /mine 304 - 699ms","service":"auth-service","timestamp":"2026-03-07T14:29:36.638Z"}
+{"level":"info","message":"GET / 304 - 576ms","service":"auth-service","timestamp":"2026-03-07T14:29:38.394Z"}
+{"level":"info","message":"GET /mine 304 - 766ms","service":"auth-service","timestamp":"2026-03-07T14:29:39.239Z"}
+{"level":"info","message":"GET /mine 304 - 571ms","service":"auth-service","timestamp":"2026-03-07T14:29:39.821Z"}
+{"level":"info","message":"GET /mine 304 - 614ms","service":"auth-service","timestamp":"2026-03-07T14:29:40.438Z"}
+{"level":"info","message":"GET /mine 304 - 583ms","service":"auth-service","timestamp":"2026-03-07T14:29:41.025Z"}
+{"level":"info","message":"GET /mine 304 - 606ms","service":"auth-service","timestamp":"2026-03-07T14:29:42.414Z"}
+{"level":"info","message":"GET /mine 304 - 640ms","service":"auth-service","timestamp":"2026-03-07T14:29:43.057Z"}
+{"level":"info","message":"POST /logout 200 - 726ms","service":"auth-service","timestamp":"2026-03-07T14:29:44.710Z"}
+{"level":"info","message":"POST /signin 200 - 1375ms","service":"auth-service","timestamp":"2026-03-07T14:29:55.969Z"}
+{"level":"info","message":"POST /verify-otp 200 - 714ms","service":"auth-service","timestamp":"2026-03-07T14:30:00.247Z"}
+{"level":"info","message":"GET / 200 - 963ms","service":"auth-service","timestamp":"2026-03-07T14:30:01.271Z"}
+{"level":"info","message":"GET /mine 200 - 1026ms","service":"auth-service","timestamp":"2026-03-07T14:30:01.324Z"}
+{"level":"info","message":"GET / 304 - 497ms","service":"auth-service","timestamp":"2026-03-07T14:30:01.775Z"}
+{"level":"info","message":"GET /mine 200 - 534ms","service":"auth-service","timestamp":"2026-03-07T14:30:01.867Z"}
+{"level":"info","message":"GET /seller-summary 200 - 478ms","service":"auth-service","timestamp":"2026-03-07T14:30:03.301Z"}
+{"level":"info","message":"GET /seller-summary 304 - 594ms","service":"auth-service","timestamp":"2026-03-07T14:30:03.912Z"}
+{"level":"info","message":"GET /property/69a9d3ff79f05abf55b0fb28 200 - 608ms","service":"auth-service","timestamp":"2026-03-07T14:30:05.464Z"}
+{"level":"info","message":"GET /property/69a9d2ce9bf64a5290dc951e 304 - 609ms","service":"auth-service","timestamp":"2026-03-07T14:30:10.162Z"}
+{"level":"info","message":"GET /property/69a9d3ff79f05abf55b0fb28 304 - 763ms","service":"auth-service","timestamp":"2026-03-07T14:30:13.844Z"}
+{"level":"info","message":"GET /mine 200 - 511ms","service":"auth-service","timestamp":"2026-03-07T14:30:18.394Z"}
+{"level":"info","message":"GET /mine 200 - 486ms","service":"auth-service","timestamp":"2026-03-07T14:30:18.882Z"}
+{"level":"info","message":"GET /seller-summary 304 - 429ms","service":"auth-service","timestamp":"2026-03-07T14:31:53.921Z"}
+{"level":"info","message":"GET / 304 - 438ms","service":"auth-service","timestamp":"2026-03-07T14:31:53.927Z"}
+{"level":"info","message":"GET /mine 200 - 557ms","service":"auth-service","timestamp":"2026-03-07T14:31:54.048Z"}
+{"level":"info","message":"GET / 304 - 524ms","service":"auth-service","timestamp":"2026-03-07T14:31:54.468Z"}
+{"level":"info","message":"GET /seller-summary 304 - 530ms","service":"auth-service","timestamp":"2026-03-07T14:31:54.473Z"}
+{"level":"info","message":"GET /mine 200 - 627ms","service":"auth-service","timestamp":"2026-03-07T14:31:54.677Z"}
+{"level":"info","message":"POST /logout 200 - 654ms","service":"auth-service","timestamp":"2026-03-07T14:31:59.685Z"}
+{"level":"info","message":"POST /signin 200 - 734ms","service":"auth-service","timestamp":"2026-03-07T14:32:06.174Z"}
+{"level":"info","message":"POST /verify-otp 200 - 624ms","service":"auth-service","timestamp":"2026-03-07T14:32:10.664Z"}
+{"level":"info","message":"GET / 200 - 449ms","service":"auth-service","timestamp":"2026-03-07T14:32:11.148Z"}
+{"level":"info","message":"GET /mine 200 - 616ms","service":"auth-service","timestamp":"2026-03-07T14:32:11.310Z"}
+{"level":"info","message":"GET / 304 - 391ms","service":"auth-service","timestamp":"2026-03-07T14:32:11.549Z"}
+{"level":"info","message":"GET /mine 304 - 622ms","service":"auth-service","timestamp":"2026-03-07T14:32:11.939Z"}
+{"level":"error","message":"🛑 Gracefully shutting down...","service":"auth-service","timestamp":"2026-03-07T14:34:12.242Z"}

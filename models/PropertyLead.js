@@ -16,4 +16,7 @@ const propertyLeadSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+// Prevent duplicate interest from the same buyer on the same property
+propertyLeadSchema.index({ pid: 1, uid: 1 }, { unique: true });
+
 module.exports = mongoose.model("PropertyLead", propertyLeadSchema);

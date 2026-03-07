@@ -84,9 +84,9 @@ router.delete('/:id', authenticateJwt, checkBlocked, async (req, res) => {
 /* ── GET /api/property-leads/mine — buyer views their leads ─────── */
 router.get('/mine', authenticateJwt, checkBlocked, async (req, res) => {
   try {
-    // Auto-delete closed leads older than 24 hours
+    // Auto-delete closed/rejected leads older than 24 hours
     const cutoff = new Date(Date.now() - 24 * 60 * 60 * 1000);
-    await PropertyLead.deleteMany({ uid: req.user.id, status: 'closed', closedAt: { $lte: cutoff } });
+    await PropertyLead.deleteMany({ uid: req.user.id, status: { $in: ['closed', 'rejected'] }, closedAt: { $lte: cutoff } });
 
     const page  = Math.max(1, Number(req.query.page)  || 1);
     const limit = Math.min(50, Math.max(1, Number(req.query.limit) || 12));
@@ -134,13 +134,14 @@ router.get('/seller-summary', authenticateJwt, checkBlocked, async (req, res) =>
       ...(req.user.role === 'admin'
         ? []
         : [{ $match: { 'property.owner': userId } }]),
-      // group by property — count leads + capture latest activity
+      // group by property — active count (new/contacted) + total + latest activity
       {
         $group: {
           _id: '$pid',
-          property: { $first: '$property' },
-          leadCount: { $sum: 1 },
-          latestAt:  { $max: '$createdAt' },
+          property:    { $first: '$property' },
+          leadCount:   { $sum: { $cond: [{ $in: ['$status', ['new', 'contacted']] }, 1, 0] } },
+          totalLeads:  { $sum: 1 },
+          latestAt:    { $max: '$createdAt' },
         },
       },
       { $sort: { latestAt: -1 } },
@@ -148,13 +149,14 @@ router.get('/seller-summary', authenticateJwt, checkBlocked, async (req, res) =>
       {
         $project: {
           _id: 0,
-          pid:       '$_id',
-          leadCount: 1,
-          latestAt:  1,
-          title:     '$property.title',
-          images:    '$property.images',
-          address:   '$property.address',
-          status:    '$property.status',
+          pid:        '$_id',
+          leadCount:  1,
+          totalLeads: 1,
+          latestAt:   1,
+          title:      '$property.title',
+          images:     '$property.images',
+          address:    '$property.address',
+          status:     '$property.status',
         },
       },
     ]);
@@ -215,7 +217,7 @@ router.patch('/:id/status', authenticateJwt, checkBlocked, async (req, res) => {
 
     const oldStatus = lead.status;
     lead.status = status;
-    if (status === 'closed') lead.closedAt = new Date();
+    if (status === 'closed' || status === 'rejected') lead.closedAt = new Date();
     else lead.closedAt = null;
     await lead.save();
 
@@ -260,19 +262,31 @@ router.patch('/property/:pid/close-all', authenticateJwt, checkBlocked, async (r
     }
 
     const closedAt = new Date();
-    await PropertyLead.updateMany(
-      { pid: req.params.pid, status: { $ne: 'closed' } },
-      { $set: { status: 'closed', closedAt } }
-    );
+
+    // Find leads that will actually be closed (skip already-terminal ones)
+    const toClose = await PropertyLead.find(
+      { pid: req.params.pid, status: { $nin: ['closed', 'rejected'] } },
+      '_id status'
+    ).lean();
+
+    if (toClose.length > 0) {
+      await PropertyLead.updateMany(
+        { _id: { $in: toClose.map((l) => l._id) } },
+        { $set: { status: 'closed', closedAt } }
+      );
+      // Write one audit entry per affected lead
+      await Promise.all(toClose.map((l) =>
+        writeAudit({ lid: l._id, actionType: 'STATUS_CHANGED', oldStatus: l.status, newStatus: 'closed', performedBy: req.user.id })
+      ));
+    }
 
     const updated = await Property.findByIdAndUpdate(
       req.params.pid,
       { $set: { status: 'inactive' } },
       { new: true }
     );
-    console.log('[close-all] property update result:', updated?._id, updated?.status);
 
-    res.json({ success: true, propertyStatus: updated?.status });
+    res.json({ success: true, closedCount: toClose.length, propertyStatus: updated?.status });
   } catch (err) {
     res.status(500).json({ error: err.message || 'Failed to close leads' });
   }
