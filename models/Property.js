@@ -51,6 +51,7 @@ const propertySchema = new mongoose.Schema(
 
     amenities: [{ type: String }],
     images:    [{ type: String }],
+    video:     { type: String, default: '' },   // URL to property walkthrough video
 
     status: {
       type: String,

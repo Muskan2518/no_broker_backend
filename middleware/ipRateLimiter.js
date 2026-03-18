@@ -2,9 +2,8 @@ require("dotenv").config();
 const logger = require("../config/logger");
 const { redisIncrWithExpiry } = require("../database/reddis_setup");
 
-const MAX_FREE_TRIES = parseInt(process.env.MAX_FREE_TRIES) || 1;
-const WINDOW_SECONDS =
-  parseInt(process.env.RATE_LIMIT_WINDOW_SECONDS) || 900; // 15 mins
+const MAX_FREE_TRIES = parseInt(process.env.MAX_FREE_TRIES) || 10;
+const WINDOW_SECONDS = parseInt(process.env.RATE_LIMIT_WINDOW_SECONDS) || 900;
 
 const ipRateLimiter = async (req, res, next) => {
   try {

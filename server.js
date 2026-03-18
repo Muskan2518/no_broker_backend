@@ -83,7 +83,7 @@ async function startServer() {
 
     app.use(requestLogger);
     app.use(securityHeaders);
-    app.use(rateLimiter({ windowSeconds: 900, maxRequests: 100 }));
+    app.use(rateLimiter({ windowSeconds: 900, maxRequests: 500 }));
 
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));

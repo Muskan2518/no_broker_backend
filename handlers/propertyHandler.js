@@ -34,7 +34,7 @@ router.post('/', authenticateJwt, checkBlocked, async (req, res) => {
     const {
       title, description, listingType, propertyType, price,
       bedrooms, bathrooms, areaSquareFeet, furnishing,
-      address, location, amenities, images,
+      address, location, amenities, images, video,
     } = req.body;
 
     if (!title || !listingType || !propertyType || !price || !address?.city) {
@@ -66,6 +66,7 @@ router.post('/', authenticateJwt, checkBlocked, async (req, res) => {
       ...(geoLocationData ? { geoLocation: geoLocationData } : {}),
       amenities: amenities || [],
       images: images || [],
+      video: video || '',
       owner: req.user.id,
     });
 
@@ -212,7 +213,7 @@ router.patch('/:id', authenticateJwt, checkBlocked, async (req, res) => {
     if (!existing) return res.status(404).json({ error: 'Property not found or unauthorized' });
 
     const { title, description, listingType, propertyType, price,
-            bedrooms, bathrooms, areaSquareFeet, furnishing, address, location, amenities, images } = req.body;
+            bedrooms, bathrooms, areaSquareFeet, furnishing, address, location, amenities, images, video } = req.body;
 
     const updates = {};
     const auditEntries = [];
@@ -287,6 +288,10 @@ router.patch('/:id', authenticateJwt, checkBlocked, async (req, res) => {
         auditEntries.push({ actionType: 'UPDATED', fieldName: 'images',
           oldValue: `${oldCount} photo(s)`, newValue: `${newCount} photo(s)` });
       }
+    }
+
+    if (video !== undefined) {
+      track('video', existing.video || '', video || '');
     }
 
     if (Object.keys(updates).length === 0) {

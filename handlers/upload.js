@@ -42,4 +42,37 @@ router.post("/upload", upload.single("file"), async (req, res) => {
   }
 });
 
+// GET /api/upload/signed-url — generate a pre-signed S3 PUT URL for direct browser upload
+// Query params: fileName (required), contentType (required)
+router.get("/upload/signed-url", async (req, res) => {
+  try {
+    const { fileName, contentType } = req.query;
+    if (!fileName || !contentType) {
+      return res.status(400).json({ error: "fileName and contentType are required" });
+    }
+
+    const ext = path.extname(fileName) || "";
+    const objectName = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}${ext}`;
+
+    const params = {
+      Bucket: bucketName,
+      Key: objectName,
+      ContentType: contentType,
+      Expires: 300, // 5 minutes
+    };
+
+    const signedUrl = await s3.getSignedUrlPromise("putObject", params);
+
+    // Build the public URL the same way the upload endpoint does
+    const endpoint = (process.env.MINIO_ENDPOINT || "").replace(/\/s3\/?$/, "");
+    const objectUrl = `${endpoint}/object/public/${bucketName}/${objectName}`;
+
+    res.json({ signedUrl, objectName, objectUrl });
+  } catch (err) {
+    const logger = require("../config/logger");
+    logger.error("Signed URL generation error:", err);
+    res.status(500).json({ error: "Failed to generate signed URL" });
+  }
+});
+
 module.exports = router;
